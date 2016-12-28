@@ -1,0 +1,107 @@
+2010.04.07 (0.3.3) 開発版
+  Delphi言語に対応。
+
+2008.11.22 (0.3.2)
+  ソースファイルの文字エンコーディング指定機能を追加。
+
+2008.10.24 (0.3.1)
+  JDK 1.5 対応。
+
+2007.12.24 (0.2.1) Eclipse 3.3 対策
+  ※今回に限り pluginのみバージョン番号採番のうえリリースします。
+  (plugin)バージョン番号を採番更新。
+  (plugin) workbenchMonitorを利用するのを停止しました。
+    →これは、Eclipse 3.3 で workbenchMonitor を利用すると org.eclipse.swt.SWTException: Invalid thread access が発生してしまうので、これを避けるためです。
+  (plugin)about.htmlを更新。
+  (plugin)build.xmlを更新。
+  (plugin)plugin.xmlの再生成
+  (plugin)ウィザードの生成ディレクトリに関する記述を更新 (Blanco*WizardPage4)
+  (jar)jarファイル類を更新チェック。
+
+2007.12.14 (0.2.0) RC1版
+  (jar)jarファイル類の更新。
+    (1)利用している定義書を更新。(特に ValueObjectやConstantsなど)
+  ソースコードのリファクタリング (他のプロダクトと構造を共通化)
+    (1)メッセージ定義書の導入。
+    (2)structure2Sourceメソッドの作成。
+    (3)XmlParserクラスを作成。
+    (4)フィールド名変更: listField → fieldList
+    (5)フィールドの型を変更: java.util.ArrayList → java.util.List
+  build.xmlの更新。
+  不要ファイルを削除。
+    (1)blancoフォルダを再生成 (ぽろぽろと不具合を発見)
+    (2)不要なtestフォルダ以下を削除。
+  (plugin)プラグイン
+    (1)ウィザードの画面の対応言語リストを更新。
+       横長すぎにならないよう注意。
+    (2)about.htmlを更新。
+
+2007.05.31 (0.1.5)
+  (Python)Pythonに対応。
+
+2007.05.30 (0.1.4)
+  (jar)blancoCgを更新。
+  (Ruby)Rubyに対応。
+
+2006.12.27 (0.1.3)
+  (jar)jarファイル類の更新。
+  build.xmlファイルをblancoAntにより更新。
+  TODO convertToStringメソッドをJava以外に横展開。
+  TODO 整数定数のための定数値を外部から与える仕様の検討
+
+2006.12.07 (0.1.2)
+  (Java)convertToStringを先行して実装。
+  (plugin)プラグイン作成はスキップ。
+  (jar)blancoXmlBindingを更新。
+
+2006.11.13 (0.1.1)
+  (JavaScript)バグ修正。blancoCgにおける定数表現が変更されたので、それに呼応してthis.修飾を クラス名.修飾へと変更する必要がありました。
+  (jar)blancoCgを更新。
+
+2006.11.13 (0.1.0)
+  (blancoCg)BlancoCgStatementUtilのメソッドを隠蔽化。BlancoCgLineUtilに読み替えます。
+
+2006.11.10 (0.0.9)
+  blancoAntに対応。
+  (VB.NET)(PHP)VB.NET, PHPに対応開始。
+  BlancoStringGroupSupportedLangStringGroup.xls を削除しました。blancoフォルダの再構築が必要です。
+  トランスフォーマ取得に BlancoCgTransformerFactory.getSourceTransformer を利用するように変更しました。
+  BlancoJavaSourceUtil への直接参照を除去。
+  (plugin)バージョン番号が表示されるように機能追加。
+
+2006.10.26 (0.0.8)
+  build.xmlを改善。
+  ・サンプルソースコードがjarファイルに混入していたのを改善。
+  ・VOのjunitをfalseに変更。
+  Apache Ant でバージョン番号を表示する機能を追加。
+  (Eclipseプラグイン側は既にバージョン番号表示が埋め込まれていました。)
+  blancoCodeGeneratorへの依存を完全に削除。
+  jarファイル類の更新。
+
+2006.10.04 (0.0.7)
+  (plugin)Eclipseプラグインを新規に作成。
+  定数定義書を導入。
+
+2006.10.02 (0.0.6)
+  (JavaScript)Java, C#.NET版と同様に matchIgnoreCaseメソッドを生成するように機能追加。
+
+2006.09.29 (0.0.5)
+  (blancoCommons)JExcelApi 2.6が ×をカタカナに読み間違える不具合に対応 (blancoCommons版)。
+    (具体的には jxl-2.6blanco.jar + blancoCommons 1.0.1以降を利用。jxl-2.6blanco2.jarは廃止)
+
+2006.09.28 (0.0.4)
+  (jexcelapi)JExcelApi 2.6が ×をカタカナに読み間違える不具合に対応。
+    (具体的には JExcelApiのjarファイルにパッチを適用した jxl-2.6blanco2.jarを利用開始)
+  blancoStringGroup自身のblancoStringGroup対応。
+  テストケースを追加。
+
+2006.09.27 (0.0.3)
+  matchIgnoreCaseメソッドを生成するように追加。
+  クラスの内部構造をリファクタリング。(blancoCharacterGroupには未反映)
+
+2006.09.14 (0.0.2)
+  定数に指定された値は、強制的に大文字化してソースコード展開するように仕様追加。
+  Javaソースコードに展開する際に適切にエスケープしてソースコード出力するように修正。
+
+2006.09.13 (0.0.1)
+  新規作成

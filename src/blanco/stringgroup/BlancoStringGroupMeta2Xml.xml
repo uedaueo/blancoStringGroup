@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- blancoCalcParser define file for blancoCharacterGroup -->
+<blanco version="0.1.0">
+  <target name="blancoCalcParser">
+    <blancocalcparser name="stringgroup">
+      <propertyblock name="blancostringgroup-common" waitY="1">
+        <startstring>文字列グループ定義・共通</startstring>
+        <propertykey name="name" waitX="2">
+          <value>文字列グループ定義ID</value>
+        </propertykey>
+        <propertykey name="package" waitX="2">
+          <value>パッケージ</value>
+        </propertykey>
+        <propertykey name="description" waitX="2">
+          <value>説明</value>
+        </propertykey>
+        <propertykey name="suffix" waitX="2">
+          <value>サフィックス</value>
+        </propertykey>
+      </propertyblock>
+
+      <tableblock name="blancostringgroup-list" waitY="2" titleheight="3" rowname="field">
+        <startstring>文字列グループ定義・一覧</startstring>
+
+        <tablecolumn name="no">
+          <value>No.</value>
+        </tablecolumn>
+        <tablecolumn name="value">
+          <value>文字列</value>
+        </tablecolumn>
+        <tablecolumn name="constant">
+          <value>定数</value>
+        </tablecolumn>
+        <tablecolumn name="description">
+          <value>説明</value>
+        </tablecolumn>
+
+      </tableblock>
+
+    </blancocalcparser>
+  </target>
+</blanco>

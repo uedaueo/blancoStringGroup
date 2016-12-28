@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="blancoStringGroup" default="build" basedir=".">
+	<!-- blancoAnt(0.1.7)により自動生成されました。 (2008/11/21) -->
+	<property name="version" value="0.3.3" />
+
+	<property name="project" value="blancoStringGroup" />
+	<property name="project.lower" value="blancostringgroup" />
+	<property name="project.zip" value="${project}-${version}-src.zip" />
+	<property name="project.main.jar" value="blancostringgroup-${version}.jar" />
+
+	<property name="encoding" value="Windows-31J" />
+	<property name="eclipse.dir" value="C:/Program Files/eclipse" />
+	<property name="dotnet.dir" value="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727" />
+
+	<!-- Antタスク定義 begin -->
+	<taskdef name="blancoanttask" classname="blanco.anttask.task.BlancoAntTaskTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="blancoconstants" classname="blanco.constants.task.BlancoConstantsTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="blancomessage" classname="blanco.message.task.BlancoMessageTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="blancometa2xml" classname="blanco.meta2xml.task.BlancoMeta2XmlTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="blancoresourcebundle" classname="blanco.resourcebundle.task.BlancoResourceBundleTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<taskdef name="blancovalueobject" classname="blanco.valueobject.task.BlancoValueObjectTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<!-- Antタスク定義 end -->
+
+	<!-- 自分自身のAntタスク。 -->
+	<taskdef name="blancostringgroup" classname="blanco.stringgroup.task.BlancoStringGroupTask">
+		<classpath>
+			<fileset dir="lib" includes="*.jar" />
+			<fileset dir="lib.ant" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<target name="pack">
+		<echo>packing project</echo>
+		<delete file="${project.zip}" />
+		<delete dir="bin" />
+		<delete dir="javadoc" />
+
+		<delete dir="tmp" />
+
+		<copy todir="lib.ant">
+			<fileset dir=".">
+				<include name="${project.lower}-*.jar" />
+			</fileset>
+		</copy>
+
+		<delete>
+			<fileset dir=".">
+				<include name="${project.lower}-*.jar" />
+			</fileset>
+		</delete>
+
+		<zip destfile="${project.zip}">
+			<zipfileset dir="." prefix="${project}" excludes="${project.zip},**/*.class" />
+		</zip>
+
+	</target>
+
+	<target name="jar">
+		<echo>building jar</echo>
+
+		<!-- 定義書読込設定XMLファイル(blancoCalcParserが利用) をコピーします。 -->
+		<copy file="src/blanco/stringgroup/BlancoStringGroupMeta2Xml.xml" todir="bin/blanco/stringgroup" />
+
+		<delete file="${project.main.jar}" />
+		<jar destfile="${project.main.jar}">
+			<zipfileset dir="doc" prefix="doc" />
+			<!-- classの取り込み (※sampleは除外) -->
+			<zipfileset dir="bin" includes="**/*" excludes="blanco/sample/**" />
+			<!-- Javaソースコード(通常)の取り込み (※sampleは除外) -->
+			<zipfileset dir="src" includes="**/*" prefix="src" excludes="blanco/sample/**" />
+			<!-- Javaソースコード(自動生成)の取り込み (※sampleは除外) -->
+			<zipfileset dir="blanco/main" includes="**/*.java" prefix="src" excludes="blanco/sample/**" />
+			<!-- プロパティファイルの取り込み -->
+			<zipfileset dir="blanco/main" includes="**/*.properties" excludes="blanco/sample/**" />
+		</jar>
+	</target>
+
+	<target name="compile">
+		<delete dir="bin" />
+		<mkdir dir="bin" />
+		<javac destdir="bin" debug="true" source="1.5" target="1.5" fork="false">
+			<src path="blanco/main/" />
+			<src path="src/" />
+			<classpath>
+				<!-- ワイルドカードで一括取り込み -->
+				<fileset dir="lib" includes="*.jar" />
+				<pathelement path="${eclipse.dir}/plugins/org.junit_3.8.2.v20080602-1318/junit.jar" />
+			</classpath>
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="javadoc">
+		<echo>JavaDocを生成します。</echo>
+		<delete dir="javadoc" />
+		<javadoc destdir="javadoc">
+			<fileset dir="src" />
+			<fileset dir="blanco/main" />
+			<classpath>
+				<fileset dir="lib" includes="*.jar" />
+				<fileset dir="lib.ant" includes="*.jar" />
+			</classpath>
+		</javadoc>
+	</target>
+
+	<target name="meta">
+		<blancoanttask metadir="meta/program" encoding="${encoding}" />
+		<blancoconstants metadir="meta/program" encoding="${encoding}" />
+		<blancomessage metadir="meta/program" encoding="${encoding}" />
+		<blancometa2xml metadir="meta/program" encoding="${encoding}" />
+		<blancoresourcebundle metadir="meta/program" commenttimestamp="false" encoding="${encoding}" />
+		<blancovalueobject metadir="meta/program" encoding="${encoding}" />
+
+		<!-- TODO: ここに自身のantタスクを追加してください。 -->
+		<blancostringgroup metadir="meta/program" targetlang="java" targetdir="blanco" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="cs" targetdir="blanco.cs" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="js" targetdir="blanco.js" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="vb" targetdir="blanco.vb" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="php" targetdir="blanco.php" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="ruby" targetdir="blanco.ruby" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="python" targetdir="blanco.python" encoding="${encoding}" />
+		<blancostringgroup metadir="meta/program" targetlang="delphi" targetdir="blanco.delphi" encoding="${encoding}" />
+	</target>
+
+	<target name="build" depends="meta,compile,jar,pack">
+	</target>
+
+	<!-- .NET Framework SDK によるコンパイルのセクション:begin -->
+	<target name="compile.cs">
+		<exec executable="${dotnet.dir}\csc.exe">
+			<arg line="/target:library" />
+			<arg line="/out:tmp/blancolib.dll" />
+			<arg line="/doc:tmp/blancolib.xml" />
+			<arg line="/recurse:*.cs" />
+		</exec>
+	</target>
+
+	<target name="compile.vb">
+		<exec executable="${dotnet.dir}\vbc.exe">
+			<arg line="/target:library" />
+			<arg line="/out:tmp/blancolib.dll" />
+			<arg line="/doc:tmp/blancolib.xml" />
+			<arg line="/recurse:*.vb" />
+		</exec>
+	</target>
+	<!-- .NET Framework SDK によるコンパイルのセクション:end -->
+</project>
