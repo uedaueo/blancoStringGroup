@@ -1,218 +1,218 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.stringgroup.task.valueobject;
 
 /**
- * ˆ—ƒNƒ‰ƒX [BlancoStringGroupProcess]‚Ì“ü—ÍƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒgƒNƒ‰ƒX‚Å‚·B
+ * å‡¦ç†ã‚¯ãƒ©ã‚¹ [BlancoStringGroupProcess]ã®å…¥åŠ›ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚¯ãƒ©ã‚¹ã§ã™ã€‚
  */
 public class BlancoStringGroupProcessInput {
     /**
-     * ƒtƒB[ƒ‹ƒh [verbose]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [verbose]
      *
-     * €–Ú‚ÌŒ^ [boolean]<br>
-     * ‹K’è’l   [false]<br>
-     * verboseƒ‚[ƒh‚Å“®ì‚³‚¹‚é‚©‚Ç‚¤‚©B
+     * é …ç›®ã®å‹ [boolean]<br>
+     * è¦å®šå€¤   [false]<br>
+     * verboseãƒ¢ãƒ¼ãƒ‰ã§å‹•ä½œã•ã›ã‚‹ã‹ã©ã†ã‹ã€‚
      */
     private boolean fVerbose = false;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [metadir]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [metadir]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ƒƒ^ƒfƒBƒŒƒNƒgƒŠBxlsƒtƒ@ƒCƒ‹‚ÌŠi”[æ‚Ü‚½‚Í xmlƒtƒ@ƒCƒ‹‚ÌŠi”[æ‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * ãƒ¡ã‚¿ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã€‚xlsãƒ•ã‚¡ã‚¤ãƒ«ã®æ ¼ç´å…ˆã¾ãŸã¯ xmlãƒ•ã‚¡ã‚¤ãƒ«ã®æ ¼ç´å…ˆã‚’æŒ‡å®šã—ã¾ã™ã€‚
      */
     private String fMetadir;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [targetdir]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [targetdir]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ‹K’è’l   [blanco]<br>
-     * o—ÍæƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìblanco‚ğ—p‚¢‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è¦å®šå€¤   [blanco]<br>
+     * å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®blancoã‚’ç”¨ã„ã¾ã™ã€‚
      */
     private String fTargetdir = "blanco";
 
     /**
-     * ƒtƒB[ƒ‹ƒh [tmpdir]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [tmpdir]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ‹K’è’l   [tmp]<br>
-     * ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìtmp‚ğ—p‚¢‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è¦å®šå€¤   [tmp]<br>
+     * ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®tmpã‚’ç”¨ã„ã¾ã™ã€‚
      */
     private String fTmpdir = "tmp";
 
     /**
-     * ƒtƒB[ƒ‹ƒh [encoding]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [encoding]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ©“®¶¬‚·‚éƒ\[ƒXƒtƒ@ƒCƒ‹‚Ì•¶šƒGƒ“ƒR[ƒfƒBƒ“ƒO‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è‡ªå‹•ç”Ÿæˆã™ã‚‹ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      */
     private String fEncoding;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [targetlang]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [targetlang]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ‹K’è’l   [java]<br>
-     * ƒ^[ƒQƒbƒg‚Æ‚È‚éƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œêˆ—Œn–¼Bjava, cs, js,vb,php,ruby,python‚ª‘I‘ğ‰Â”\
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è¦å®šå€¤   [java]<br>
+     * ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã¨ãªã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªå‡¦ç†ç³»åã€‚java, cs, js,vb,php,ruby,pythonãŒé¸æŠå¯èƒ½
      */
     private String fTargetlang = "java";
 
     /**
-     * ƒtƒB[ƒ‹ƒh [verbose]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [verbose]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [boolean]<br>
-     * verboseƒ‚[ƒh‚Å“®ì‚³‚¹‚é‚©‚Ç‚¤‚©B
+     * é …ç›®ã®å‹ [boolean]<br>
+     * verboseãƒ¢ãƒ¼ãƒ‰ã§å‹•ä½œã•ã›ã‚‹ã‹ã©ã†ã‹ã€‚
      *
-     * @param argVerbose ƒtƒB[ƒ‹ƒh[verbose]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argVerbose ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[verbose]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setVerbose(final boolean argVerbose) {
         fVerbose = argVerbose;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[verbose]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[verbose]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [boolean]<br>
-     * ‹K’è’l   [false]<br>
-     * verboseƒ‚[ƒh‚Å“®ì‚³‚¹‚é‚©‚Ç‚¤‚©B
+     * é …ç›®ã®å‹ [boolean]<br>
+     * è¦å®šå€¤   [false]<br>
+     * verboseãƒ¢ãƒ¼ãƒ‰ã§å‹•ä½œã•ã›ã‚‹ã‹ã©ã†ã‹ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[verbose]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[verbose]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public boolean getVerbose() {
         return fVerbose;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [metadir]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [metadir]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ƒƒ^ƒfƒBƒŒƒNƒgƒŠBxlsƒtƒ@ƒCƒ‹‚ÌŠi”[æ‚Ü‚½‚Í xmlƒtƒ@ƒCƒ‹‚ÌŠi”[æ‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * ãƒ¡ã‚¿ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã€‚xlsãƒ•ã‚¡ã‚¤ãƒ«ã®æ ¼ç´å…ˆã¾ãŸã¯ xmlãƒ•ã‚¡ã‚¤ãƒ«ã®æ ¼ç´å…ˆã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @param argMetadir ƒtƒB[ƒ‹ƒh[metadir]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argMetadir ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[metadir]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setMetadir(final String argMetadir) {
         fMetadir = argMetadir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[metadir]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[metadir]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ƒƒ^ƒfƒBƒŒƒNƒgƒŠBxlsƒtƒ@ƒCƒ‹‚ÌŠi”[æ‚Ü‚½‚Í xmlƒtƒ@ƒCƒ‹‚ÌŠi”[æ‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * ãƒ¡ã‚¿ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã€‚xlsãƒ•ã‚¡ã‚¤ãƒ«ã®æ ¼ç´å…ˆã¾ãŸã¯ xmlãƒ•ã‚¡ã‚¤ãƒ«ã®æ ¼ç´å…ˆã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[metadir]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[metadir]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getMetadir() {
         return fMetadir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [targetdir]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [targetdir]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * o—ÍæƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìblanco‚ğ—p‚¢‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®blancoã‚’ç”¨ã„ã¾ã™ã€‚
      *
-     * @param argTargetdir ƒtƒB[ƒ‹ƒh[targetdir]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argTargetdir ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetdir]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setTargetdir(final String argTargetdir) {
         fTargetdir = argTargetdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[targetdir]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetdir]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ‹K’è’l   [blanco]<br>
-     * o—ÍæƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìblanco‚ğ—p‚¢‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è¦å®šå€¤   [blanco]<br>
+     * å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®blancoã‚’ç”¨ã„ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[targetdir]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetdir]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getTargetdir() {
         return fTargetdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [tmpdir]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [tmpdir]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìtmp‚ğ—p‚¢‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®tmpã‚’ç”¨ã„ã¾ã™ã€‚
      *
-     * @param argTmpdir ƒtƒB[ƒ‹ƒh[tmpdir]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argTmpdir ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[tmpdir]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setTmpdir(final String argTmpdir) {
         fTmpdir = argTmpdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[tmpdir]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[tmpdir]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ‹K’è’l   [tmp]<br>
-     * ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìtmp‚ğ—p‚¢‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è¦å®šå€¤   [tmp]<br>
+     * ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®tmpã‚’ç”¨ã„ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[tmpdir]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[tmpdir]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getTmpdir() {
         return fTmpdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [encoding]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [encoding]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ©“®¶¬‚·‚éƒ\[ƒXƒtƒ@ƒCƒ‹‚Ì•¶šƒGƒ“ƒR[ƒfƒBƒ“ƒO‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è‡ªå‹•ç”Ÿæˆã™ã‚‹ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @param argEncoding ƒtƒB[ƒ‹ƒh[encoding]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argEncoding ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[encoding]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setEncoding(final String argEncoding) {
         fEncoding = argEncoding;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[encoding]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[encoding]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ©“®¶¬‚·‚éƒ\[ƒXƒtƒ@ƒCƒ‹‚Ì•¶šƒGƒ“ƒR[ƒfƒBƒ“ƒO‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è‡ªå‹•ç”Ÿæˆã™ã‚‹ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[encoding]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[encoding]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getEncoding() {
         return fEncoding;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [targetlang]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [targetlang]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ƒ^[ƒQƒbƒg‚Æ‚È‚éƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œêˆ—Œn–¼Bjava, cs, js,vb,php,ruby,python‚ª‘I‘ğ‰Â”\
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã¨ãªã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªå‡¦ç†ç³»åã€‚java, cs, js,vb,php,ruby,pythonãŒé¸æŠå¯èƒ½
      *
-     * @param argTargetlang ƒtƒB[ƒ‹ƒh[targetlang]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argTargetlang ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetlang]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setTargetlang(final String argTargetlang) {
         fTargetlang = argTargetlang;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[targetlang]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetlang]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * ‹K’è’l   [java]<br>
-     * ƒ^[ƒQƒbƒg‚Æ‚È‚éƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œêˆ—Œn–¼Bjava, cs, js,vb,php,ruby,python‚ª‘I‘ğ‰Â”\
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * è¦å®šå€¤   [java]<br>
+     * ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã¨ãªã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªå‡¦ç†ç³»åã€‚java, cs, js,vb,php,ruby,pythonãŒé¸æŠå¯èƒ½
      *
-     * @return ƒtƒB[ƒ‹ƒh[targetlang]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetlang]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getTargetlang() {
         return fTargetlang;
     }
 
     /**
-     * ‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B
+     * ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Å‚µ‚©toString‚³‚ê‚È‚¢“_‚É’ˆÓ‚µ‚Ä—˜—p‚µ‚Ä‚­‚¾‚³‚¢B
+     * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã§ã—ã‹toStringã•ã‚Œãªã„ç‚¹ã«æ³¨æ„ã—ã¦åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚
      *
-     * @return ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B
+     * @return ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚
      */
     public String toString() {
         final StringBuffer buf = new StringBuffer();

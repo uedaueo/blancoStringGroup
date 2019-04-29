@@ -1,5 +1,5 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚Á‚Ä©“®¶¬‚³‚ê‚Ä‚¢‚Ü‚·B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã£ã¦è‡ªå‹•ç”Ÿæˆã•ã‚Œã¦ã„ã¾ã™ã€‚
  */
 package blanco.stringgroup.task;
 
@@ -8,18 +8,18 @@ import java.io.IOException;
 import blanco.stringgroup.task.valueobject.BlancoStringGroupProcessInput;
 
 /**
- * ˆ— [BlancoStringGroupProcess]ƒCƒ“ƒ^ƒtƒF[ƒXB
+ * å‡¦ç† [BlancoStringGroupProcess]ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã€‚
  *
- * ‚±‚ÌƒCƒ“ƒ^ƒtƒF[ƒX‚ğŒp³‚µ‚Ä [blanco.stringgroup.task]ƒpƒbƒP[ƒW‚É[BlancoStringGroupProcess]ƒNƒ‰ƒX‚ğì¬‚µ‚ÄÀÛ‚Ìƒoƒbƒ`ˆ—‚ğÀ‘•‚µ‚Ä‚­‚¾‚³‚¢B<br>
+ * ã“ã®ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã‚’ç¶™æ‰¿ã—ã¦ [blanco.stringgroup.task]ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã«[BlancoStringGroupProcess]ã‚¯ãƒ©ã‚¹ã‚’ä½œæˆã—ã¦å®Ÿéš›ã®ãƒãƒƒãƒå‡¦ç†ã‚’å®Ÿè£…ã—ã¦ãã ã•ã„ã€‚<br>
  */
 interface BlancoStringGroupProcess {
     /**
-     * ƒNƒ‰ƒX‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚Äˆ—‚ğÀs‚·‚éÛ‚ÌƒGƒ“ƒgƒŠƒ|ƒCƒ“ƒg‚Å‚·B
+     * ã‚¯ãƒ©ã‚¹ã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ã¦å‡¦ç†ã‚’å®Ÿè¡Œã™ã‚‹éš›ã®ã‚¨ãƒ³ãƒˆãƒªãƒã‚¤ãƒ³ãƒˆã§ã™ã€‚
      *
-     * @param input ˆ—‚Ì“ü—Íƒpƒ‰ƒ[ƒ^B
-     * @return ˆ—‚ÌÀsŒ‹‰ÊB
-     * @throws IOException “üo—Í—áŠO‚ª”­¶‚µ‚½ê‡B
-     * @throws IllegalArgumentException “ü—Í’l‚É•s³‚ªŒ©‚Â‚©‚Á‚½ê‡B
+     * @param input å‡¦ç†ã®å…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã€‚
+     * @return å‡¦ç†ã®å®Ÿè¡Œçµæœã€‚
+     * @throws IOException å…¥å‡ºåŠ›ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
+     * @throws IllegalArgumentException å…¥åŠ›å€¤ã«ä¸æ­£ãŒè¦‹ã¤ã‹ã£ãŸå ´åˆã€‚
      */
     int execute(final BlancoStringGroupProcessInput input) throws IOException, IllegalArgumentException;
 }

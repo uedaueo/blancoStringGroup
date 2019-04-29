@@ -1,146 +1,146 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.stringgroup.valueobject;
 
 /**
- * BlancoStringGroup‚Ì‚È‚©‚Å—˜—p‚³‚ê‚éValueObject‚Å‚·B
+ * BlancoStringGroupã®ãªã‹ã§åˆ©ç”¨ã•ã‚Œã‚‹ValueObjectã§ã™ã€‚
  */
 public class BlancoStringGroupFieldStructure {
     /**
-     * ƒtƒB[ƒ‹ƒh [no]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [no]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * €–Ú”Ô†
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * é …ç›®ç•ªå·
      */
     private String fNo;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [value]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [value]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚
      */
     private String fValue;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [constant]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [constant]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚ÉŠ„‚è•t‚¯‚ç‚ê‚é’è”‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã«å‰²ã‚Šä»˜ã‘ã‚‰ã‚Œã‚‹å®šæ•°ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      */
     private String fConstant;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [description]
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [description]
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚É‘Î‚·‚éà–¾‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã«å¯¾ã™ã‚‹èª¬æ˜ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      */
     private String fDescription;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [no]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [no]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * €–Ú”Ô†
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * é …ç›®ç•ªå·
      *
-     * @param argNo ƒtƒB[ƒ‹ƒh[no]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argNo ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[no]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setNo(final String argNo) {
         fNo = argNo;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[no]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[no]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * €–Ú”Ô†
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * é …ç›®ç•ªå·
      *
-     * @return ƒtƒB[ƒ‹ƒh[no]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[no]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getNo() {
         return fNo;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [value]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [value]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚
      *
-     * @param argValue ƒtƒB[ƒ‹ƒh[value]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argValue ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[value]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setValue(final String argValue) {
         fValue = argValue;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[value]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[value]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚ğw’è‚µ‚Ü‚·B•K{€–Ú‚Å‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã‚’æŒ‡å®šã—ã¾ã™ã€‚å¿…é ˆé …ç›®ã§ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[value]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[value]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getValue() {
         return fValue;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [constant]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [constant]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚ÉŠ„‚è•t‚¯‚ç‚ê‚é’è”‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã«å‰²ã‚Šä»˜ã‘ã‚‰ã‚Œã‚‹å®šæ•°ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @param argConstant ƒtƒB[ƒ‹ƒh[constant]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argConstant ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[constant]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setConstant(final String argConstant) {
         fConstant = argConstant;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[constant]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[constant]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚ÉŠ„‚è•t‚¯‚ç‚ê‚é’è”‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã«å‰²ã‚Šä»˜ã‘ã‚‰ã‚Œã‚‹å®šæ•°ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[constant]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[constant]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getConstant() {
         return fConstant;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [description]‚ÌƒZƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [description]ã®ã‚»ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚É‘Î‚·‚éà–¾‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã«å¯¾ã™ã‚‹èª¬æ˜ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @param argDescription ƒtƒB[ƒ‹ƒh[description]‚ÉŠi”[‚µ‚½‚¢’l
+     * @param argDescription ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[description]ã«æ ¼ç´ã—ãŸã„å€¤
      */
     public void setDescription(final String argDescription) {
         fDescription = argDescription;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh[description]‚ÌƒQƒbƒ^[ƒƒ\ƒbƒh
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[description]ã®ã‚²ãƒƒã‚¿ãƒ¼ãƒ¡ã‚½ãƒƒãƒ‰
      *
-     * €–Ú‚ÌŒ^ [java.lang.String]<br>
-     * •¶š—ñ‚É‘Î‚·‚éà–¾‚ğw’è‚µ‚Ü‚·B
+     * é …ç›®ã®å‹ [java.lang.String]<br>
+     * æ–‡å­—åˆ—ã«å¯¾ã™ã‚‹èª¬æ˜ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[description]‚ÉŠi”[‚³‚ê‚Ä‚¢‚é’l
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[description]ã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹å€¤
      */
     public String getDescription() {
         return fDescription;
     }
 
     /**
-     * ‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B
+     * ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Å‚µ‚©toString‚³‚ê‚È‚¢“_‚É’ˆÓ‚µ‚Ä—˜—p‚µ‚Ä‚­‚¾‚³‚¢B
+     * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã§ã—ã‹toStringã•ã‚Œãªã„ç‚¹ã«æ³¨æ„ã—ã¦åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚
      *
-     * @return ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B
+     * @return ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚
      */
     public String toString() {
         final StringBuffer buf = new StringBuffer();

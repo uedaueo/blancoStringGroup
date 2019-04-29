@@ -30,45 +30,45 @@ import blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure;
 import blanco.stringgroup.valueobject.BlancoStringGroupStructure;
 
 /**
- * u•¶š—ñƒOƒ‹[ƒv’è‹`‘vExcel—l®‚©‚ç•¶š—ñƒOƒ‹[ƒv‚ğˆ—‚·‚éƒNƒ‰ƒXEƒ\[ƒXƒR[ƒh‚ğ¶¬B
+ * ã€Œæ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—å®šç¾©æ›¸ã€Excelæ§˜å¼ã‹ã‚‰æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã‚’å‡¦ç†ã™ã‚‹ã‚¯ãƒ©ã‚¹ãƒ»ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’ç”Ÿæˆã€‚
  * 
- * ‚±‚ÌƒNƒ‰ƒX‚ÍA’†ŠÔXMLƒtƒ@ƒCƒ‹‚©‚çƒ\[ƒXƒR[ƒh‚ğ©“®¶¬‚·‚é‹@”\‚ğ’S‚¢‚Ü‚·B
+ * ã“ã®ã‚¯ãƒ©ã‚¹ã¯ã€ä¸­é–“XMLãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’è‡ªå‹•ç”Ÿæˆã™ã‚‹æ©Ÿèƒ½ã‚’æ‹…ã„ã¾ã™ã€‚
  * 
  * @author IGA Tosiki
  */
 public class BlancoStringGroupXml2SourceFile {
     /**
-     * ƒƒbƒZ[ƒW’è‹`B
+     * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©ã€‚
      */
     private final BlancoStringGroupMessage fMsg = new BlancoStringGroupMessage();
 
     /**
-     * ‚±‚Ìƒvƒƒ_ƒNƒg‚ÌƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚Ö‚ÌƒAƒNƒZƒXƒIƒuƒWƒFƒNƒgB
+     * ã“ã®ãƒ—ãƒ­ãƒ€ã‚¯ãƒˆã®ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      */
     private final BlancoStringGroupResourceBundle fBundle = new BlancoStringGroupResourceBundle();
 
     /**
-     * o—Í‘ÎÛ‚Æ‚È‚éƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾ŒêB
+     * å‡ºåŠ›å¯¾è±¡ã¨ãªã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªã€‚
      */
     private int fTargetLang = BlancoCgSupportedLang.NOT_DEFINED;
 
     /**
-     * “à•”“I‚É—˜—p‚·‚éblancoCg—pƒtƒ@ƒNƒgƒŠB
+     * å†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹blancoCgç”¨ãƒ•ã‚¡ã‚¯ãƒˆãƒªã€‚
      */
     private BlancoCgObjectFactory fCgFactory = null;
 
     /**
-     * “à•”“I‚É—˜—p‚·‚éblancoCg—pƒ\[ƒXƒtƒ@ƒCƒ‹î•ñB
+     * å†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹blancoCgç”¨ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«æƒ…å ±ã€‚
      */
     private BlancoCgSourceFile fCgSourceFile = null;
 
     /**
-     * “à•”“I‚É—˜—p‚·‚éblancoCg—pƒNƒ‰ƒXî•ñB
+     * å†…éƒ¨çš„ã«åˆ©ç”¨ã™ã‚‹blancoCgç”¨ã‚¯ãƒ©ã‚¹æƒ…å ±ã€‚
      */
     private BlancoCgClass fCgClass = null;
 
     /**
-     * ©“®¶¬‚·‚éƒ\[ƒXƒtƒ@ƒCƒ‹‚Ì•¶šƒGƒ“ƒR[ƒfƒBƒ“ƒOB
+     * è‡ªå‹•ç”Ÿæˆã™ã‚‹ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã€‚
      */
     private String fEncoding = null;
 
@@ -77,16 +77,16 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * ’†ŠÔXMLƒtƒ@ƒCƒ‹‚©‚çƒ\[ƒXƒR[ƒh‚ğ©“®¶¬‚µ‚Ü‚·B
+     * ä¸­é–“XMLãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’è‡ªå‹•ç”Ÿæˆã—ã¾ã™ã€‚
      * 
      * @param argMetaXmlSourceFile
-     *            ƒƒ^î•ñ‚ªŠÜ‚Ü‚ê‚Ä‚¢‚éXMLƒtƒ@ƒCƒ‹B
+     *            ãƒ¡ã‚¿æƒ…å ±ãŒå«ã¾ã‚Œã¦ã„ã‚‹XMLãƒ•ã‚¡ã‚¤ãƒ«ã€‚
      * @param argTargetLang
-     *            o—Í‘ÎÛ‚Æ‚È‚éƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾ŒêB
+     *            å‡ºåŠ›å¯¾è±¡ã¨ãªã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªã€‚
      * @param argDirectoryTarget
-     *            ƒ\[ƒXƒR[ƒh¶¬æƒfƒBƒŒƒNƒgƒŠ (/main‚ğœ‚­•”•ª‚ğw’è‚µ‚Ü‚·)B
+     *            ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ç”Ÿæˆå…ˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª (/mainã‚’é™¤ãéƒ¨åˆ†ã‚’æŒ‡å®šã—ã¾ã™)ã€‚
      * @throws IOException
-     *             “üo—Í—áŠO‚ª”­¶‚µ‚½ê‡B
+     *             å…¥å‡ºåŠ›ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
      */
     public void process(final File argMetaXmlSourceFile,
             final String argTargetLang, final File argDirectoryTarget)
@@ -111,22 +111,22 @@ public class BlancoStringGroupXml2SourceFile {
                 .parse(argMetaXmlSourceFile);
 
         for (int index = 0; index < structures.length; index++) {
-            // ƒƒ^î•ñ‚Ì‰ğÍŒ‹‰Ê‚ğ‚à‚Æ‚Éƒ\[ƒXƒR[ƒh©“®¶¬‚ğÀs‚µ‚Ü‚·B
+            // ãƒ¡ã‚¿æƒ…å ±ã®è§£æçµæœã‚’ã‚‚ã¨ã«ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰è‡ªå‹•ç”Ÿæˆã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
             structure2Source(structures[index], argDirectoryTarget);
         }
     }
 
     /**
-     * ûW‚³‚ê‚½î•ñ‚ğŒ³‚ÉAƒ\[ƒXƒR[ƒh‚ğ©“®¶¬‚µ‚Ü‚·B
+     * åé›†ã•ã‚ŒãŸæƒ…å ±ã‚’å…ƒã«ã€ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’è‡ªå‹•ç”Ÿæˆã—ã¾ã™ã€‚
      * 
      * @param argStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argDirectoryTarget
-     *            ƒ\[ƒXƒR[ƒh‚Ìo—ÍæƒtƒHƒ‹ƒ_B
+     *            ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã€‚
      */
     public void structure2Source(final BlancoStringGroupStructure argStructure,
             final File argDirectoryTarget) {
-        // ]—ˆ‚ÆŒİŠ·«‚ğ‚½‚¹‚é‚½‚ßA/mainƒTƒuƒtƒHƒ‹ƒ_‚Éo—Í‚µ‚Ü‚·B
+        // å¾“æ¥ã¨äº’æ›æ€§ã‚’æŒãŸã›ã‚‹ãŸã‚ã€/mainã‚µãƒ–ãƒ•ã‚©ãƒ«ãƒ€ã«å‡ºåŠ›ã—ã¾ã™ã€‚
         final File fileBlancoMain = new File(argDirectoryTarget
                 .getAbsolutePath()
                 + "/main");
@@ -139,7 +139,7 @@ public class BlancoStringGroupXml2SourceFile {
         fCgSourceFile.setEncoding(fEncoding);
         switch (fTargetLang) {
         case BlancoCgSupportedLang.DELPHI:
-            // DelphiŒ¾Œê‚Å‚ÍAUnit–¼‚Æ‚Ì–¼‘OÕ“Ë‚ğ”ğ‚¯‚é‚½‚ßAŠµ—á‚É]‚¢ƒNƒ‰ƒX–¼‚É‹­§“I‚ÉT‚ğ‚Â‚¯‚Ü‚·B
+            // Delphiè¨€èªã§ã¯ã€Unitåã¨ã®åå‰è¡çªã‚’é¿ã‘ã‚‹ãŸã‚ã€æ…£ä¾‹ã«å¾“ã„ã‚¯ãƒ©ã‚¹åã«å¼·åˆ¶çš„ã«Tã‚’ã¤ã‘ã¾ã™ã€‚
             fCgClass = fCgFactory.createClass("T" + argStructure.getName()
                     + BlancoStringUtil.null2Blank(argStructure.getSuffix()),
                     BlancoStringUtil.null2Blank(argStructure.getDescription()));
@@ -157,7 +157,7 @@ public class BlancoStringGroupXml2SourceFile {
         expandMethodMatchIgnoreCase(argStructure);
         expandMethodConvertToInt(argStructure);
 
-        // TODO Œ»İ JavaŒ¾Œê‚É‚µ‚©‘Î‰‚µ‚Ä‚¢‚Ü‚¹‚ñB
+        // TODO ç¾åœ¨ Javaè¨€èªã«ã—ã‹å¯¾å¿œã—ã¦ã„ã¾ã›ã‚“ã€‚
         switch (fTargetLang) {
         case BlancoCgSupportedLang.JAVA:
             expandMethodConvertToString(argStructure);
@@ -169,10 +169,10 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * ’è”ƒtƒB[ƒ‹ƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * å®šæ•°ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private void expandField(
             final BlancoStringGroupStructure argProcessStructure) {
@@ -187,7 +187,7 @@ public class BlancoStringGroupXml2SourceFile {
             }
 
             String description = "";
-            // ‚±‚±‚©‚çŒÂ•Ê‚Ì•¶š‚É‘Î‚·‚éˆ—‚ğ‹Lq‚µ‚Ü‚·B
+            // ã“ã“ã‹ã‚‰å€‹åˆ¥ã®æ–‡å­—ã«å¯¾ã™ã‚‹å‡¦ç†ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
             if (fieldLook.getNo() != null) {
                 description += fBundle.getXml2sourceFileFieldNo(fieldLook
                         .getNo()
@@ -211,7 +211,7 @@ public class BlancoStringGroupXml2SourceFile {
 
         if (isProcessed) {
             final BlancoCgField cgField = fCgFactory.createField("NOT_DEFINED",
-                    getTypeInt(), "–¢’è‹`B•¶š—ñƒOƒ‹[ƒvˆÈŠO‚Ì•¶š—ñ‚Ü‚½‚Í’è”‚ª–¢’è‹`‚Ì‚à‚ÌB");
+                    getTypeInt(), "æœªå®šç¾©ã€‚æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ä»¥å¤–ã®æ–‡å­—åˆ—ã¾ãŸã¯å®šæ•°ãŒæœªå®šç¾©ã®ã‚‚ã®ã€‚");
             fCgClass.getFieldList().add(cgField);
 
             cgField.setAccess("public");
@@ -222,22 +222,22 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * matchƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * matchãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private void expandMethodMatch(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                getMethodName("match"), "•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚é•¶š—ñ‚Å‚ ‚é‚©‚Ç‚¤‚©‚ğ”»’è‚µ‚Ü‚·B");
+                getMethodName("match"), "æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã‚‹æ–‡å­—åˆ—ã§ã‚ã‚‹ã‹ã©ã†ã‹ã‚’åˆ¤å®šã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeString(),
-                        "ƒ`ƒFƒbƒN‚ğs‚¢‚½‚¢•¶š—ñB"));
+                        "ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã„ãŸã„æ–‡å­—åˆ—ã€‚"));
         cgMethod.setReturn(fCgFactory.createReturn(getTypeBoolean(),
-                "•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚ê‚ÎtureBƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚È‚¢•¶š—ñ‚Å‚ ‚ê‚ÎfalseB"));
+                "æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã¦ã„ã‚Œã°tureã€‚ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œãªã„æ–‡å­—åˆ—ã§ã‚ã‚Œã°falseã€‚"));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -246,7 +246,7 @@ public class BlancoStringGroupXml2SourceFile {
             final BlancoStringGroupFieldStructure fieldLook = (BlancoStringGroupFieldStructure) argProcessStructure
                     .getFieldList().get(indexField);
 
-            // ‚±‚±‚©‚çŒÂ•Ê‚Ì•¶š‚É‘Î‚·‚éˆ—‚ğ‹Lq‚µ‚Ü‚·B
+            // ã“ã“ã‹ã‚‰å€‹åˆ¥ã®æ–‡å­—ã«å¯¾ã™ã‚‹å‡¦ç†ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
             if (fieldLook.getNo() != null) {
                 lineList.add(BlancoCgLineUtil
                         .getSingleLineCommentPrefix(fTargetLang)
@@ -371,23 +371,23 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * matchIgnoreCaseƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * matchIgnoreCaseãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private void expandMethodMatchIgnoreCase(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
                 getMethodName("matchIgnoreCase"),
-                "•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚é•¶š—ñ‚Å‚ ‚é‚©‚Ç‚¤‚©‚ğA‘å•¶š¬•¶š‚ğ‹æ•Ê‚¹‚¸”»’è‚µ‚Ü‚·B");
+                "æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã‚‹æ–‡å­—åˆ—ã§ã‚ã‚‹ã‹ã©ã†ã‹ã‚’ã€å¤§æ–‡å­—å°æ–‡å­—ã‚’åŒºåˆ¥ã›ãšåˆ¤å®šã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeString(),
-                        "ƒ`ƒFƒbƒN‚ğs‚¢‚½‚¢•¶š—ñB"));
+                        "ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã„ãŸã„æ–‡å­—åˆ—ã€‚"));
         cgMethod.setReturn(fCgFactory.createReturn(getTypeBoolean(),
-                "•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚ê‚ÎtureBƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚È‚¢•¶š—ñ‚Å‚ ‚ê‚ÎfalseB"));
+                "æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã¦ã„ã‚Œã°tureã€‚ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œãªã„æ–‡å­—åˆ—ã§ã‚ã‚Œã°falseã€‚"));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -396,7 +396,7 @@ public class BlancoStringGroupXml2SourceFile {
             final BlancoStringGroupFieldStructure fieldLook = (BlancoStringGroupFieldStructure) argProcessStructure
                     .getFieldList().get(indexField);
 
-            // ‚±‚±‚©‚çŒÂ•Ê‚Ì•¶š‚É‘Î‚·‚éˆ—‚ğ‹Lq‚µ‚Ü‚·B
+            // ã“ã“ã‹ã‚‰å€‹åˆ¥ã®æ–‡å­—ã«å¯¾ã™ã‚‹å‡¦ç†ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
             if (fieldLook.getNo() != null) {
                 lineList.add(BlancoCgLineUtil
                         .getSingleLineCommentPrefix(fTargetLang)
@@ -535,24 +535,24 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * convertToIntƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * convertToIntãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private void expandMethodConvertToInt(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                getMethodName("convertToInt"), "•¶š—ñ‚©‚ç’è”‚É•ÏŠ·‚µ‚Ü‚·B");
+                getMethodName("convertToInt"), "æ–‡å­—åˆ—ã‹ã‚‰å®šæ•°ã«å¤‰æ›ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "’è”‚ª–¢’è‹`‚Ìê‡‚â —^‚¦‚ç‚ê‚½•¶š—ñ‚ª•¶š—ñƒOƒ‹[ƒvŠO‚Ìê‡‚É‚Í NOT_DEFINED ‚ğ–ß‚µ‚Ü‚·B");
+                "å®šæ•°ãŒæœªå®šç¾©ã®å ´åˆã‚„ ä¸ãˆã‚‰ã‚ŒãŸæ–‡å­—åˆ—ãŒæ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—å¤–ã®å ´åˆã«ã¯ NOT_DEFINED ã‚’æˆ»ã—ã¾ã™ã€‚");
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeString(),
-                        "•ÏŠ·‚ğs‚¢‚½‚¢•¶š—ñB"));
-        cgMethod.setReturn(fCgFactory.createReturn(getTypeInt(), "’è”‚É•ÏŠ·Œã‚Ì’lB"));
+                        "å¤‰æ›ã‚’è¡Œã„ãŸã„æ–‡å­—åˆ—ã€‚"));
+        cgMethod.setReturn(fCgFactory.createReturn(getTypeInt(), "å®šæ•°ã«å¤‰æ›å¾Œã®å€¤ã€‚"));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -562,11 +562,11 @@ public class BlancoStringGroupXml2SourceFile {
                     .getFieldList().get(indexField);
 
             if (BlancoStringUtil.null2Blank(fieldLook.getConstant()).length() == 0) {
-                // ’è”‚ª–¢’è‹`‚Ì‚à‚Ì‚ÍƒXƒLƒbƒv‚µ‚Ü‚·B
+                // å®šæ•°ãŒæœªå®šç¾©ã®ã‚‚ã®ã¯ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                 continue;
             }
 
-            // ‚±‚±‚©‚çŒÂ•Ê‚Ì•¶š‚É‘Î‚·‚éˆ—‚ğ‹Lq‚µ‚Ü‚·B
+            // ã“ã“ã‹ã‚‰å€‹åˆ¥ã®æ–‡å­—ã«å¯¾ã™ã‚‹å‡¦ç†ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
             if (fieldLook.getNo() != null) {
                 lineList.add(BlancoCgLineUtil
                         .getSingleLineCommentPrefix(fTargetLang)
@@ -683,7 +683,7 @@ public class BlancoStringGroupXml2SourceFile {
 
         lineList.add("");
         lineList.add(BlancoCgLineUtil.getSingleLineCommentPrefix(fTargetLang)
-                + "ŠY“–‚·‚é’è”‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B");
+                + "è©²å½“ã™ã‚‹å®šæ•°ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚");
 
         switch (fTargetLang) {
         case BlancoCgSupportedLang.JAVA:
@@ -719,26 +719,26 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * convertToStringƒƒ\ƒbƒh‚ğ“WŠJ‚µ‚Ü‚·B
+     * convertToStringãƒ¡ã‚½ãƒƒãƒ‰ã‚’å±•é–‹ã—ã¾ã™ã€‚
      * 
-     * TODO JavaŒ¾Œê‚É‚Ì‚İ‘Î‰‚µ‚Ä‚¢‚Ü‚·B‘¼‚ÌŒ¾Œê‚É‚Í‘Î‰‚µ‚Ä‚¢‚Ü‚¹‚ñB
+     * TODO Javaè¨€èªã«ã®ã¿å¯¾å¿œã—ã¦ã„ã¾ã™ã€‚ä»–ã®è¨€èªã«ã¯å¯¾å¿œã—ã¦ã„ã¾ã›ã‚“ã€‚
      * 
      * @param argProcessStructure
-     *            ƒƒ^ƒtƒ@ƒCƒ‹‚©‚çûW‚Å‚«‚½ˆ—\‘¢ƒf[ƒ^B
+     *            ãƒ¡ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰åé›†ã§ããŸå‡¦ç†æ§‹é€ ãƒ‡ãƒ¼ã‚¿ã€‚
      */
     private void expandMethodConvertToString(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                getMethodName("convertToString"), "’è”‚©‚ç•¶š—ñ‚É•ÏŠ·‚µ‚Ü‚·B");
+                getMethodName("convertToString"), "å®šæ•°ã‹ã‚‰æ–‡å­—åˆ—ã«å¤‰æ›ã—ã¾ã™ã€‚");
         fCgClass.getMethodList().add(cgMethod);
 
-        cgMethod.getLangDoc().getDescriptionList().add("’è”‚Æ‘Î‰‚Ã‚­•¶š—ñ‚É•ÏŠ·‚µ‚Ü‚·B");
+        cgMethod.getLangDoc().getDescriptionList().add("å®šæ•°ã¨å¯¾å¿œã¥ãæ–‡å­—åˆ—ã«å¤‰æ›ã—ã¾ã™ã€‚");
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeInt(),
-                        "•ÏŠ·‚ğs‚¢‚½‚¢•¶š’è”B"));
+                        "å¤‰æ›ã‚’è¡Œã„ãŸã„æ–‡å­—å®šæ•°ã€‚"));
         cgMethod.setReturn(fCgFactory.createReturn(getTypeString(),
-                "•¶š—ñ‚É•ÏŠ·Œã‚Ì’lBNOT_DEFINED‚Ìê‡‚É‚Í’·‚³0‚Ì•¶š—ñB"));
+                "æ–‡å­—åˆ—ã«å¤‰æ›å¾Œã®å€¤ã€‚NOT_DEFINEDã®å ´åˆã«ã¯é•·ã•0ã®æ–‡å­—åˆ—ã€‚"));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -775,7 +775,7 @@ public class BlancoStringGroupXml2SourceFile {
         }
 
         lineList.add(BlancoCgLineUtil.getSingleLineCommentPrefix(fTargetLang)
-                + "–¢’è‹`B");
+                + "æœªå®šç¾©ã€‚");
         lineList.add("if (argCheck == NOT_DEFINED) {");
         lineList.add("return "
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
@@ -785,23 +785,23 @@ public class BlancoStringGroupXml2SourceFile {
 
         lineList.add("");
         lineList.add(BlancoCgLineUtil.getSingleLineCommentPrefix(fTargetLang)
-                + "‚¢‚¸‚ê‚É‚àŠY“–‚µ‚Ü‚¹‚ñ‚Å‚µ‚½B");
+                + "ã„ãšã‚Œã«ã‚‚è©²å½“ã—ã¾ã›ã‚“ã§ã—ãŸã€‚");
         lineList.add("throw new IllegalArgumentException("
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
-                + "—^‚¦‚ç‚ê‚½’l("
+                + "ä¸ãˆã‚‰ã‚ŒãŸå€¤("
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
                 + " + argCheck + "
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
-                + ")‚Í•¶š—ñƒOƒ‹[ƒv[" + argProcessStructure.getName()
-                + "]‚Å‚Í’è‹`‚³‚ê‚È‚¢’l‚Å‚·B"
+                + ")ã¯æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—[" + argProcessStructure.getName()
+                + "]ã§ã¯å®šç¾©ã•ã‚Œãªã„å€¤ã§ã™ã€‚"
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang) + ")"
                 + BlancoCgLineUtil.getTerminator(fTargetLang));
     }
 
     /**
-     * ƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œêˆ—Œn‚É‡‚Á‚½ boolean Œ^‚Ì–¼Ì‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªå‡¦ç†ç³»ã«åˆã£ãŸ boolean å‹ã®åç§°ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * Œ^‚Ì“Ç‚İ‘Ö‚¦B
+     * å‹ã®èª­ã¿æ›¿ãˆã€‚
      * 
      * @return
      */
@@ -820,9 +820,9 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * ƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œêˆ—Œn‚É‡‚Á‚½ String Œ^‚Ì–¼Ì‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªå‡¦ç†ç³»ã«åˆã£ãŸ String å‹ã®åç§°ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * Œ^‚Ì“Ç‚İ‘Ö‚¦B
+     * å‹ã®èª­ã¿æ›¿ãˆã€‚
      * 
      * @return
      */
@@ -858,12 +858,12 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * ƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œêˆ—Œn‚É‡‚Á‚½ ƒƒ\ƒbƒh‚Ì–¼‘O•ÏŒ`‚ğ‚¨‚±‚È‚¢‚Ü‚·B
+     * ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªå‡¦ç†ç³»ã«åˆã£ãŸ ãƒ¡ã‚½ãƒƒãƒ‰ã®åå‰å¤‰å½¢ã‚’ãŠã“ãªã„ã¾ã™ã€‚
      * 
-     * ƒƒ\ƒbƒh–¼‚Ì“Ç‚İ‘Ö‚¦B
+     * ãƒ¡ã‚½ãƒƒãƒ‰åã®èª­ã¿æ›¿ãˆã€‚
      * 
      * @param argMethodName
-     *            ƒƒ\ƒbƒh–¼B
+     *            ãƒ¡ã‚½ãƒƒãƒ‰åã€‚
      * @return
      */
     private final String getMethodName(final String argMethodName) {

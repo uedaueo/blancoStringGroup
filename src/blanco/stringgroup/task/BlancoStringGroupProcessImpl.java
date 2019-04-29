@@ -21,13 +21,13 @@ import blanco.stringgroup.message.BlancoStringGroupMessage;
 import blanco.stringgroup.task.valueobject.BlancoStringGroupProcessInput;
 
 /**
- * u•¶š—ñƒOƒ‹[ƒv’è‹`‘vExcel—l®‚©‚ç•¶š—ñƒOƒ‹[ƒv‚ğˆ—‚·‚éƒNƒ‰ƒXEƒ\[ƒXƒR[ƒh‚ğ¶¬B
+ * ã€Œæ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—å®šç¾©æ›¸ã€Excelæ§˜å¼ã‹ã‚‰æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã‚’å‡¦ç†ã™ã‚‹ã‚¯ãƒ©ã‚¹ãƒ»ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’ç”Ÿæˆã€‚
  * 
  * @author IGA Tosiki
  */
 public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
     /**
-     * ƒƒbƒZ[ƒW’è‹`B
+     * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®šç¾©ã€‚
      */
     private final BlancoStringGroupMessage fMsg = new BlancoStringGroupMessage();
 
@@ -43,16 +43,16 @@ public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
                         .getMetadir()));
             }
 
-            // ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğì¬B
+            // ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œæˆã€‚
             new File(input.getTmpdir()
                     + BlancoStringGroupConstants.TARGET_SUBDIRECTORY).mkdirs();
 
-            // w’è‚³‚ê‚½ƒƒ^ƒfƒBƒŒƒNƒgƒŠ‚ğˆ—‚µ‚Ü‚·B
+            // æŒ‡å®šã•ã‚ŒãŸãƒ¡ã‚¿ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å‡¦ç†ã—ã¾ã™ã€‚
             new BlancoStringGroupMeta2Xml().processDirectory(fileMetadir, input
                     .getTmpdir()
                     + BlancoStringGroupConstants.TARGET_SUBDIRECTORY);
 
-            // XML‰»‚³‚ê‚½’†ŠÔƒtƒ@ƒCƒ‹‚©‚çƒ\[ƒXƒR[ƒh‚ğ¶¬
+            // XMLåŒ–ã•ã‚ŒãŸä¸­é–“ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’ç”Ÿæˆ
             final File[] fileMeta2 = new File(input.getTmpdir()
                     + BlancoStringGroupConstants.TARGET_SUBDIRECTORY)
                     .listFiles();
@@ -69,7 +69,7 @@ public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
 
             return BlancoStringGroupBatchProcess.END_SUCCESS;
         } catch (TransformerException ex) {
-            throw new IOException("XML•ÏŠ·‚Ì‰ß’ö‚Å—áŠO‚ª”­¶‚µ‚Ü‚µ‚½: " + ex.toString());
+            throw new IOException("XMLå¤‰æ›ã®éç¨‹ã§ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã—ãŸ: " + ex.toString());
         }
     }
 }

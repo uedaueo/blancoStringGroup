@@ -1,38 +1,38 @@
-// ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+// ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
 unit SampleStringGroup;
 
 interface
     uses SysUtils;
 
 type
-    { •¶š—ñƒOƒ‹[ƒv‚ÌƒTƒ“ƒvƒ‹B‚±‚ÌƒNƒ‰ƒX‚Í’P‚ÉƒTƒ“ƒvƒ‹‚Å‚·BÀÛ‚Ì“®ì‚É‚Í—˜—p‚³‚ê‚Ü‚¹‚ñB }
+    { æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã®ã‚µãƒ³ãƒ—ãƒ«ã€‚ã“ã®ã‚¯ãƒ©ã‚¹ã¯å˜ã«ã‚µãƒ³ãƒ—ãƒ«ã§ã™ã€‚å®Ÿéš›ã®å‹•ä½œã«ã¯åˆ©ç”¨ã•ã‚Œã¾ã›ã‚“ã€‚ }
     TSampleStringGroup = class(TObject)
 
-        { No.1 à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B }
+        { No.1 èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚ }
         const ABCDEFG = 1;
 
-        { No.2 à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B }
+        { No.2 èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚ }
         const AIUEO = 2;
 
-        { No.3 à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB }
+        { No.3 èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚ }
         const QUOTE = 3;
 
-        { No.4 à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB }
+        { No.4 èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚ }
         const DOUBLE_QUOTE = 4;
 
-        { No.5 à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB }
+        { No.5 èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚ }
         const BACK_SLASH = 5;
 
         { No.7  }
         const WITHOUT_DESC = 7;
 
-        { No.8 à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB }
+        { No.8 èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚ }
         const TEST_SPACE = 8;
 
-        { No.9 à–¾:~ƒ}[ƒNB }
+        { No.9 èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚ }
         const BATU = 9;
 
-        { –¢’è‹`B•¶š—ñƒOƒ‹[ƒvˆÈŠO‚Ì•¶š—ñ‚Ü‚½‚Í’è”‚ª–¢’è‹`‚Ì‚à‚ÌB }
+        { æœªå®šç¾©ã€‚æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ä»¥å¤–ã®æ–‡å­—åˆ—ã¾ãŸã¯å®šæ•°ãŒæœªå®šç¾©ã®ã‚‚ã®ã€‚ }
         const NOT_DEFINED = -1;
 
         function match(argCheck: String): boolean;
@@ -46,55 +46,55 @@ implementation
     function TSampleStringGroup.match(argCheck: String): boolean;
     begin
         // No.1
-        // à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B
+        // èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚
         if 'ABCDEFG' = argCheck then begin
             result := True;
             exit;
         end;
         // No.2
-        // à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B
-        if '‚ ‚¢‚¤‚¦‚¨' = argCheck then begin
+        // èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚
+        if 'ã‚ã„ã†ãˆãŠ' = argCheck then begin
             result := True;
             exit;
         end;
         // No.3
-        // à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if '''' = argCheck then begin
             result := True;
             exit;
         end;
         // No.4
-        // à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if '"' = argCheck then begin
             result := True;
             exit;
         end;
         // No.5
-        // à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if '\' = argCheck then begin
             result := True;
             exit;
         end;
         // No.6
-        // à–¾:’è”‚ªÈ—ª‚³‚ê‚½’è‹`B
+        // èª¬æ˜:å®šæ•°ãŒçœç•¥ã•ã‚ŒãŸå®šç¾©ã€‚
         if 'STRING ONLY' = argCheck then begin
             result := True;
             exit;
         end;
         // No.7
-        if 'à–¾‚ğÈ—ª' = argCheck then begin
+        if 'èª¬æ˜ã‚’çœç•¥' = argCheck then begin
             result := True;
             exit;
         end;
         // No.8
-        // à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if 'ABC DEF' = argCheck then begin
             result := True;
             exit;
         end;
         // No.9
-        // à–¾:~ƒ}[ƒNB
-        if '~' = argCheck then begin
+        // èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚
+        if 'Ã—' = argCheck then begin
             result := True;
             exit;
         end;
@@ -105,55 +105,55 @@ implementation
     function TSampleStringGroup.matchIgnoreCase(argCheck: String): boolean;
     begin
         // No.1
-        // à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B
+        // èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚
         if UpperCase('ABCDEFG') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.2
-        // à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B
-        if UpperCase('‚ ‚¢‚¤‚¦‚¨') = UpperCase(argCheck) then begin
+        // èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚
+        if UpperCase('ã‚ã„ã†ãˆãŠ') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.3
-        // à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if UpperCase('''') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.4
-        // à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if UpperCase('"') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.5
-        // à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if UpperCase('\') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.6
-        // à–¾:’è”‚ªÈ—ª‚³‚ê‚½’è‹`B
+        // èª¬æ˜:å®šæ•°ãŒçœç•¥ã•ã‚ŒãŸå®šç¾©ã€‚
         if UpperCase('STRING ONLY') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.7
-        if UpperCase('à–¾‚ğÈ—ª') = UpperCase(argCheck) then begin
+        if UpperCase('èª¬æ˜ã‚’çœç•¥') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.8
-        // à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if UpperCase('ABC DEF') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
         // No.9
-        // à–¾:~ƒ}[ƒNB
-        if UpperCase('~') = UpperCase(argCheck) then begin
+        // èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚
+        if UpperCase('Ã—') = UpperCase(argCheck) then begin
             result := True;
             exit;
         end;
@@ -164,54 +164,54 @@ implementation
     function TSampleStringGroup.convertToInt(argCheck: String): Integer;
     begin
         // No.1
-        // à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B
+        // èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚
         if 'ABCDEFG' = argCheck then begin
             result := ABCDEFG;
             exit;
         end;
         // No.2
-        // à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B
-        if '‚ ‚¢‚¤‚¦‚¨' = argCheck then begin
+        // èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚
+        if 'ã‚ã„ã†ãˆãŠ' = argCheck then begin
             result := AIUEO;
             exit;
         end;
         // No.3
-        // à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if '''' = argCheck then begin
             result := QUOTE;
             exit;
         end;
         // No.4
-        // à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if '"' = argCheck then begin
             result := DOUBLE_QUOTE;
             exit;
         end;
         // No.5
-        // à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if '\' = argCheck then begin
             result := BACK_SLASH;
             exit;
         end;
         // No.7
-        if 'à–¾‚ğÈ—ª' = argCheck then begin
+        if 'èª¬æ˜ã‚’çœç•¥' = argCheck then begin
             result := WITHOUT_DESC;
             exit;
         end;
         // No.8
-        // à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+        // èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
         if 'ABC DEF' = argCheck then begin
             result := TEST_SPACE;
             exit;
         end;
         // No.9
-        // à–¾:~ƒ}[ƒNB
-        if '~' = argCheck then begin
+        // èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚
+        if 'Ã—' = argCheck then begin
             result := BATU;
             exit;
         end;
 
-        // ŠY“–‚·‚é’è”‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B
+        // è©²å½“ã™ã‚‹å®šæ•°ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚
         result := NOT_DEFINED;
         exit;
     end;

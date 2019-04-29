@@ -1,191 +1,191 @@
-// ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+// ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
 using System;
 
 namespace blanco.sample.stringgroup
 {
-    /// <summary>•¶š—ñƒOƒ‹[ƒv‚ÌƒTƒ“ƒvƒ‹B‚±‚ÌƒNƒ‰ƒX‚Í’P‚ÉƒTƒ“ƒvƒ‹‚Å‚·BÀÛ‚Ì“®ì‚É‚Í—˜—p‚³‚ê‚Ü‚¹‚ñB</summary>
+    /// <summary>æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã®ã‚µãƒ³ãƒ—ãƒ«ã€‚ã“ã®ã‚¯ãƒ©ã‚¹ã¯å˜ã«ã‚µãƒ³ãƒ—ãƒ«ã§ã™ã€‚å®Ÿéš›ã®å‹•ä½œã«ã¯åˆ©ç”¨ã•ã‚Œã¾ã›ã‚“ã€‚</summary>
     public class SampleStringGroup
     {
-        /// <summary>No.1 à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B</summary>
+        /// <summary>No.1 èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚</summary>
         public static readonly int ABCDEFG = 1;
 
-        /// <summary>No.2 à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B</summary>
+        /// <summary>No.2 èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚</summary>
         public static readonly int AIUEO = 2;
 
-        /// <summary>No.3 à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB</summary>
+        /// <summary>No.3 èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚</summary>
         public static readonly int QUOTE = 3;
 
-        /// <summary>No.4 à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB</summary>
+        /// <summary>No.4 èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚</summary>
         public static readonly int DOUBLE_QUOTE = 4;
 
-        /// <summary>No.5 à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB</summary>
+        /// <summary>No.5 èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚</summary>
         public static readonly int BACK_SLASH = 5;
 
         /// <summary>No.7 </summary>
         public static readonly int WITHOUT_DESC = 7;
 
-        /// <summary>No.8 à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB</summary>
+        /// <summary>No.8 èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚</summary>
         public static readonly int TEST_SPACE = 8;
 
-        /// <summary>No.9 à–¾:~ƒ}[ƒNB</summary>
+        /// <summary>No.9 èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚</summary>
         public static readonly int BATU = 9;
 
-        /// <summary>–¢’è‹`B•¶š—ñƒOƒ‹[ƒvˆÈŠO‚Ì•¶š—ñ‚Ü‚½‚Í’è”‚ª–¢’è‹`‚Ì‚à‚ÌB</summary>
+        /// <summary>æœªå®šç¾©ã€‚æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ä»¥å¤–ã®æ–‡å­—åˆ—ã¾ãŸã¯å®šæ•°ãŒæœªå®šç¾©ã®ã‚‚ã®ã€‚</summary>
         public static readonly int NOT_DEFINED = -1;
 
-        /// <summary>•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚é•¶š—ñ‚Å‚ ‚é‚©‚Ç‚¤‚©‚ğ”»’è‚µ‚Ü‚·B</summary>
-        /// <param name="argCheck">ƒ`ƒFƒbƒN‚ğs‚¢‚½‚¢•¶š—ñB</param>
-        /// <returns>•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚ê‚ÎtureBƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚È‚¢•¶š—ñ‚Å‚ ‚ê‚ÎfalseB</returns>
+        /// <summary>æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã‚‹æ–‡å­—åˆ—ã§ã‚ã‚‹ã‹ã©ã†ã‹ã‚’åˆ¤å®šã—ã¾ã™ã€‚</summary>
+        /// <param name="argCheck">ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã„ãŸã„æ–‡å­—åˆ—ã€‚</param>
+        /// <returns>æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã¦ã„ã‚Œã°tureã€‚ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œãªã„æ–‡å­—åˆ—ã§ã‚ã‚Œã°falseã€‚</returns>
         public virtual bool Match(string argCheck)
         {
             // No.1
-            // à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B
+            // èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚
             if ("ABCDEFG".Equals(argCheck)) {
                 return true;
             }
             // No.2
-            // à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B
-            if ("‚ ‚¢‚¤‚¦‚¨".Equals(argCheck)) {
+            // èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚
+            if ("ã‚ã„ã†ãˆãŠ".Equals(argCheck)) {
                 return true;
             }
             // No.3
-            // à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("'".Equals(argCheck)) {
                 return true;
             }
             // No.4
-            // à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("\"".Equals(argCheck)) {
                 return true;
             }
             // No.5
-            // à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("\\".Equals(argCheck)) {
                 return true;
             }
             // No.6
-            // à–¾:’è”‚ªÈ—ª‚³‚ê‚½’è‹`B
+            // èª¬æ˜:å®šæ•°ãŒçœç•¥ã•ã‚ŒãŸå®šç¾©ã€‚
             if ("STRING ONLY".Equals(argCheck)) {
                 return true;
             }
             // No.7
-            if ("à–¾‚ğÈ—ª".Equals(argCheck)) {
+            if ("èª¬æ˜ã‚’çœç•¥".Equals(argCheck)) {
                 return true;
             }
             // No.8
-            // à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("ABC DEF".Equals(argCheck)) {
                 return true;
             }
             // No.9
-            // à–¾:~ƒ}[ƒNB
-            if ("~".Equals(argCheck)) {
+            // èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚
+            if ("Ã—".Equals(argCheck)) {
                 return true;
             }
             return false;
         }
 
-        /// <summary>•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚é•¶š—ñ‚Å‚ ‚é‚©‚Ç‚¤‚©‚ğA‘å•¶š¬•¶š‚ğ‹æ•Ê‚¹‚¸”»’è‚µ‚Ü‚·B</summary>
-        /// <param name="argCheck">ƒ`ƒFƒbƒN‚ğs‚¢‚½‚¢•¶š—ñB</param>
-        /// <returns>•¶š—ñƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚ê‚ÎtureBƒOƒ‹[ƒv‚ÉŠÜ‚Ü‚ê‚È‚¢•¶š—ñ‚Å‚ ‚ê‚ÎfalseB</returns>
+        /// <summary>æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã‚‹æ–‡å­—åˆ—ã§ã‚ã‚‹ã‹ã©ã†ã‹ã‚’ã€å¤§æ–‡å­—å°æ–‡å­—ã‚’åŒºåˆ¥ã›ãšåˆ¤å®šã—ã¾ã™ã€‚</summary>
+        /// <param name="argCheck">ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã„ãŸã„æ–‡å­—åˆ—ã€‚</param>
+        /// <returns>æ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œã¦ã„ã‚Œã°tureã€‚ã‚°ãƒ«ãƒ¼ãƒ—ã«å«ã¾ã‚Œãªã„æ–‡å­—åˆ—ã§ã‚ã‚Œã°falseã€‚</returns>
         public virtual bool MatchIgnoreCase(string argCheck)
         {
             // No.1
-            // à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B
+            // èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚
             if ("ABCDEFG".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.2
-            // à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B
-            if ("‚ ‚¢‚¤‚¦‚¨".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
+            // èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚
+            if ("ã‚ã„ã†ãˆãŠ".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.3
-            // à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("'".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.4
-            // à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("\"".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.5
-            // à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("\\".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.6
-            // à–¾:’è”‚ªÈ—ª‚³‚ê‚½’è‹`B
+            // èª¬æ˜:å®šæ•°ãŒçœç•¥ã•ã‚ŒãŸå®šç¾©ã€‚
             if ("STRING ONLY".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.7
-            if ("à–¾‚ğÈ—ª".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
+            if ("èª¬æ˜ã‚’çœç•¥".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.8
-            // à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("ABC DEF".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             // No.9
-            // à–¾:~ƒ}[ƒNB
-            if ("~".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
+            // èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚
+            if ("Ã—".Equals(argCheck, StringComparison.CurrentCultureIgnoreCase)) {
                 return true;
             }
             return false;
         }
 
-        /// <summary>•¶š—ñ‚©‚ç’è”‚É•ÏŠ·‚µ‚Ü‚·B</summary>
+        /// <summary>æ–‡å­—åˆ—ã‹ã‚‰å®šæ•°ã«å¤‰æ›ã—ã¾ã™ã€‚</summary>
         /// <remarks>
-        /// <newpara>’è”‚ª–¢’è‹`‚Ìê‡‚â —^‚¦‚ç‚ê‚½•¶š—ñ‚ª•¶š—ñƒOƒ‹[ƒvŠO‚Ìê‡‚É‚Í NOT_DEFINED ‚ğ–ß‚µ‚Ü‚·B</newpara>
+        /// <newpara>å®šæ•°ãŒæœªå®šç¾©ã®å ´åˆã‚„ ä¸ãˆã‚‰ã‚ŒãŸæ–‡å­—åˆ—ãŒæ–‡å­—åˆ—ã‚°ãƒ«ãƒ¼ãƒ—å¤–ã®å ´åˆã«ã¯ NOT_DEFINED ã‚’æˆ»ã—ã¾ã™ã€‚</newpara>
         /// </remarks>
-        /// <param name="argCheck">•ÏŠ·‚ğs‚¢‚½‚¢•¶š—ñB</param>
-        /// <returns>’è”‚É•ÏŠ·Œã‚Ì’lB</returns>
+        /// <param name="argCheck">å¤‰æ›ã‚’è¡Œã„ãŸã„æ–‡å­—åˆ—ã€‚</param>
+        /// <returns>å®šæ•°ã«å¤‰æ›å¾Œã®å€¤ã€‚</returns>
         public virtual int ConvertToInt(string argCheck)
         {
             // No.1
-            // à–¾:ƒAƒ‹ƒtƒ@ƒxƒbƒg‚Ì•¶š—ñ’è‹`B
+            // èª¬æ˜:ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã®æ–‡å­—åˆ—å®šç¾©ã€‚
             if ("ABCDEFG".Equals(argCheck)) {
                 return ABCDEFG;
             }
             // No.2
-            // à–¾:‘SŠp‚Ì•¶š—ñ’è‹`B
-            if ("‚ ‚¢‚¤‚¦‚¨".Equals(argCheck)) {
+            // èª¬æ˜:å…¨è§’ã®æ–‡å­—åˆ—å®šç¾©ã€‚
+            if ("ã‚ã„ã†ãˆãŠ".Equals(argCheck)) {
                 return AIUEO;
             }
             // No.3
-            // à–¾:ƒVƒ“ƒOƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ã‚·ãƒ³ã‚°ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("'".Equals(argCheck)) {
                 return QUOTE;
             }
             // No.4
-            // à–¾:ƒ_ƒuƒ‹ƒNƒI[ƒg‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ãƒ€ãƒ–ãƒ«ã‚¯ã‚ªãƒ¼ãƒˆãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("\"".Equals(argCheck)) {
                 return DOUBLE_QUOTE;
             }
             // No.5
-            // à–¾:ƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“WŠJ‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå±•é–‹ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("\\".Equals(argCheck)) {
                 return BACK_SLASH;
             }
             // No.7
-            if ("à–¾‚ğÈ—ª".Equals(argCheck)) {
+            if ("èª¬æ˜ã‚’çœç•¥".Equals(argCheck)) {
                 return WITHOUT_DESC;
             }
             // No.8
-            // à–¾:“r’†‚Ì‹ó”’‚ª“KØ‚Éˆ—‚³‚ê‚é‚±‚Æ‚ÌŠm”FB
+            // èª¬æ˜:é€”ä¸­ã®ç©ºç™½ãŒé©åˆ‡ã«å‡¦ç†ã•ã‚Œã‚‹ã“ã¨ã®ç¢ºèªã€‚
             if ("ABC DEF".Equals(argCheck)) {
                 return TEST_SPACE;
             }
             // No.9
-            // à–¾:~ƒ}[ƒNB
-            if ("~".Equals(argCheck)) {
+            // èª¬æ˜:Ã—ãƒãƒ¼ã‚¯ã€‚
+            if ("Ã—".Equals(argCheck)) {
                 return BATU;
             }
 
-            // ŠY“–‚·‚é’è”‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B
+            // è©²å½“ã™ã‚‹å®šæ•°ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚
             return NOT_DEFINED;
         }
     }
