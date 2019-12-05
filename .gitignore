@@ -1,3 +1,5 @@
 .idea/
 blancoStringGroup.iml
 tmp/
+target/
+blancostringgroup-0.3.2.jar
