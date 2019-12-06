@@ -16,6 +16,13 @@ maven リポジトリは github 上のpublicリポジトリに作成される前
 
 ただし現時点ではbuildが通らないので、compileやjarなど、直前のlifecycleをスキップする必要があります。
 
+事前に以下を配置します。
+
+target/blanco-stringgroup-0.3.2.jar
+target/blanco-stringgroup-0.3.2.-sources.jar
+
+以下のコマンドを実行します。
+
 ```
 mvn deploy -Dmaven.main.skip=true -Dmaven.test.skip=true
 ```
