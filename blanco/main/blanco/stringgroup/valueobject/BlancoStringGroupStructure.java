@@ -1,6 +1,3 @@
-/*
- * このソースコードは blanco Frameworkにより自動生成されました。
- */
 package blanco.stringgroup.valueobject;
 
 import java.util.List;
@@ -10,162 +7,147 @@ import java.util.List;
  */
 public class BlancoStringGroupStructure {
     /**
-     * フィールド [name]
-     *
-     * 項目の型 [java.lang.String]<br>
      * 文字列グループIDを指定します。必須項目です。
+     *
+     * フィールド: [name]。
      */
     private String fName;
 
     /**
-     * フィールド [package]
-     *
-     * 項目の型 [java.lang.String]<br>
      * パッケージ名を指定します。必須項目です。
+     *
+     * フィールド: [package]。
      */
     private String fPackage;
 
     /**
-     * フィールド [description]
-     *
-     * 項目の型 [java.lang.String]<br>
      * 文字列グループの説明を記載します。
+     *
+     * フィールド: [description]。
      */
     private String fDescription;
 
     /**
-     * フィールド [suffix]
-     *
-     * 項目の型 [java.lang.String]<br>
      * クラス名の後方に付与されるサフィックス。
+     *
+     * フィールド: [suffix]。
      */
     private String fSuffix;
 
     /**
-     * フィールド [fieldList]
-     *
-     * 項目の型 [java.util.List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>]<br>
-     * 規定値   [new java.util.ArrayList<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>()]<br>
      * フィールドを保持するリスト。
+     *
+     * フィールド: [fieldList]。
+     * デフォルト: [new java.util.ArrayList&lt;blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure&gt;()]。
      */
     private List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> fFieldList = new java.util.ArrayList<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>();
 
     /**
-     * フィールド [name]のセッターメソッド
+     * フィールド [name] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列グループIDを指定します。必須項目です。
+     * フィールドの説明: [文字列グループIDを指定します。必須項目です。]。
      *
-     * @param argName フィールド[name]に格納したい値
+     * @param argName フィールド[name]に設定する値。
      */
     public void setName(final String argName) {
         fName = argName;
     }
 
     /**
-     * フィールド[name]のゲッターメソッド
+     * フィールド [name] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列グループIDを指定します。必須項目です。
+     * フィールドの説明: [文字列グループIDを指定します。必須項目です。]。
      *
-     * @return フィールド[name]に格納されている値
+     * @return フィールド[name]から取得した値。
      */
     public String getName() {
         return fName;
     }
 
     /**
-     * フィールド [package]のセッターメソッド
+     * フィールド [package] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * パッケージ名を指定します。必須項目です。
+     * フィールドの説明: [パッケージ名を指定します。必須項目です。]。
      *
-     * @param argPackage フィールド[package]に格納したい値
+     * @param argPackage フィールド[package]に設定する値。
      */
     public void setPackage(final String argPackage) {
         fPackage = argPackage;
     }
 
     /**
-     * フィールド[package]のゲッターメソッド
+     * フィールド [package] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * パッケージ名を指定します。必須項目です。
+     * フィールドの説明: [パッケージ名を指定します。必須項目です。]。
      *
-     * @return フィールド[package]に格納されている値
+     * @return フィールド[package]から取得した値。
      */
     public String getPackage() {
         return fPackage;
     }
 
     /**
-     * フィールド [description]のセッターメソッド
+     * フィールド [description] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列グループの説明を記載します。
+     * フィールドの説明: [文字列グループの説明を記載します。]。
      *
-     * @param argDescription フィールド[description]に格納したい値
+     * @param argDescription フィールド[description]に設定する値。
      */
     public void setDescription(final String argDescription) {
         fDescription = argDescription;
     }
 
     /**
-     * フィールド[description]のゲッターメソッド
+     * フィールド [description] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列グループの説明を記載します。
+     * フィールドの説明: [文字列グループの説明を記載します。]。
      *
-     * @return フィールド[description]に格納されている値
+     * @return フィールド[description]から取得した値。
      */
     public String getDescription() {
         return fDescription;
     }
 
     /**
-     * フィールド [suffix]のセッターメソッド
+     * フィールド [suffix] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * クラス名の後方に付与されるサフィックス。
+     * フィールドの説明: [クラス名の後方に付与されるサフィックス。]。
      *
-     * @param argSuffix フィールド[suffix]に格納したい値
+     * @param argSuffix フィールド[suffix]に設定する値。
      */
     public void setSuffix(final String argSuffix) {
         fSuffix = argSuffix;
     }
 
     /**
-     * フィールド[suffix]のゲッターメソッド
+     * フィールド [suffix] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * クラス名の後方に付与されるサフィックス。
+     * フィールドの説明: [クラス名の後方に付与されるサフィックス。]。
      *
-     * @return フィールド[suffix]に格納されている値
+     * @return フィールド[suffix]から取得した値。
      */
     public String getSuffix() {
         return fSuffix;
     }
 
     /**
-     * フィールド [fieldList]のセッターメソッド
+     * フィールド [fieldList] の値を設定します。
      *
-     * 項目の型 [java.util.List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>]<br>
-     * フィールドを保持するリスト。
+     * フィールドの説明: [フィールドを保持するリスト。]。
      *
-     * @param argFieldList フィールド[fieldList]に格納したい値
+     * @param argFieldList フィールド[fieldList]に設定する値。
      */
     public void setFieldList(final List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> argFieldList) {
         fFieldList = argFieldList;
     }
 
     /**
-     * フィールド[fieldList]のゲッターメソッド
+     * フィールド [fieldList] の値を取得します。
      *
-     * 項目の型 [java.util.List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>]<br>
-     * 規定値   [new java.util.ArrayList<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>()]<br>
-     * フィールドを保持するリスト。
+     * フィールドの説明: [フィールドを保持するリスト。]。
+     * デフォルト: [new java.util.ArrayList&lt;blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure&gt;()]。
      *
-     * @return フィールド[fieldList]に格納されている値
+     * @return フィールド[fieldList]から取得した値。
      */
     public List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> getFieldList() {
         return fFieldList;
@@ -174,10 +156,15 @@ public class BlancoStringGroupStructure {
     /**
      * このバリューオブジェクトの文字列表現を取得します。
      *
-     * オブジェクトのシャロー範囲でしかtoStringされない点に注意して利用してください。
+     * <P>使用上の注意</P>
+     * <UL>
+     * <LI>オブジェクトのシャロー範囲のみ文字列化の処理対象となります。
+     * <LI>オブジェクトが循環参照している場合には、このメソッドは使わないでください。
+     * </UL>
      *
      * @return バリューオブジェクトの文字列表現。
      */
+    @Override
     public String toString() {
         final StringBuffer buf = new StringBuffer();
         buf.append("blanco.stringgroup.valueobject.BlancoStringGroupStructure[");
@@ -188,5 +175,48 @@ public class BlancoStringGroupStructure {
         buf.append(",fieldList=" + fFieldList);
         buf.append("]");
         return buf.toString();
+    }
+
+    /**
+     * このバリューオブジェクトを指定のターゲットに複写します。
+     *
+     * <P>使用上の注意</P>
+     * <UL>
+     * <LI>オブジェクトのシャロー範囲のみ複写処理対象となります。
+     * <LI>オブジェクトが循環参照している場合には、このメソッドは使わないでください。
+     * </UL>
+     *
+     * @param target target value object.
+     */
+    public void copyTo(final BlancoStringGroupStructure target) {
+        if (target == null) {
+            throw new IllegalArgumentException("Bug: BlancoStringGroupStructure#copyTo(target): argument 'target' is null");
+        }
+
+        // No needs to copy parent class.
+
+        // Name: fName
+        // Type: java.lang.String
+        target.fName = this.fName;
+        // Name: fPackage
+        // Type: java.lang.String
+        target.fPackage = this.fPackage;
+        // Name: fDescription
+        // Type: java.lang.String
+        target.fDescription = this.fDescription;
+        // Name: fSuffix
+        // Type: java.lang.String
+        target.fSuffix = this.fSuffix;
+        // Name: fFieldList
+        // Type: java.util.List
+        if (this.fFieldList != null) {
+            final java.util.Iterator<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> iterator = this.fFieldList.iterator();
+            for (; iterator.hasNext();) {
+                blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure loopSource = iterator.next();
+                blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure loopTarget = null;
+                // フィールド[generics]はサポート外の型[blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure]です。
+                target.fFieldList.add(loopTarget);
+            }
+        }
     }
 }

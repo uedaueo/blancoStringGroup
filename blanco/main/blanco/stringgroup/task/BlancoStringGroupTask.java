@@ -1,7 +1,3 @@
-/*
- * このソースコードは blanco Frameworkによって自動生成されています。
- * Apache Antタスク [BlancoStringGroup]のクラス
- */
 package blanco.stringgroup.task;
 
 import org.apache.tools.ant.BuildException;
@@ -33,27 +29,27 @@ public class BlancoStringGroupTask extends Task {
     protected BlancoStringGroupProcessInput fInput = new BlancoStringGroupProcessInput();
 
     /**
-     * 文字列グループ定義書から定数クラスを自動生成するためのAntTaskです。
+     * フィールド [metadir] に値がセットされたかどうか。
      */
     protected boolean fIsFieldMetadirProcessed = false;
 
     /**
-     * 文字列グループ定義書から定数クラスを自動生成するためのAntTaskです。
+     * フィールド [targetdir] に値がセットされたかどうか。
      */
     protected boolean fIsFieldTargetdirProcessed = false;
 
     /**
-     * 文字列グループ定義書から定数クラスを自動生成するためのAntTaskです。
+     * フィールド [tmpdir] に値がセットされたかどうか。
      */
     protected boolean fIsFieldTmpdirProcessed = false;
 
     /**
-     * 文字列グループ定義書から定数クラスを自動生成するためのAntTaskです。
+     * フィールド [encoding] に値がセットされたかどうか。
      */
     protected boolean fIsFieldEncodingProcessed = false;
 
     /**
-     * 文字列グループ定義書から定数クラスを自動生成するためのAntTaskです。
+     * フィールド [targetlang] に値がセットされたかどうか。
      */
     protected boolean fIsFieldTargetlangProcessed = false;
 
@@ -209,6 +205,7 @@ public class BlancoStringGroupTask extends Task {
      *
      * @throws BuildException タスクとしての例外が発生した場合。
      */
+    @Override
     public final void execute() throws BuildException {
         System.out.println("BlancoStringGroupTask begin.");
 

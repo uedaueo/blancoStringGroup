@@ -1,6 +1,3 @@
-/*
- * このソースコードは blanco Frameworkにより自動生成されました。
- */
 package blanco.stringgroup.valueobject;
 
 /**
@@ -8,128 +5,116 @@ package blanco.stringgroup.valueobject;
  */
 public class BlancoStringGroupFieldStructure {
     /**
-     * フィールド [no]
-     *
-     * 項目の型 [java.lang.String]<br>
      * 項目番号
+     *
+     * フィールド: [no]。
      */
     private String fNo;
 
     /**
-     * フィールド [value]
-     *
-     * 項目の型 [java.lang.String]<br>
      * 文字列を指定します。必須項目です。
+     *
+     * フィールド: [value]。
      */
     private String fValue;
 
     /**
-     * フィールド [constant]
-     *
-     * 項目の型 [java.lang.String]<br>
      * 文字列に割り付けられる定数を指定します。
+     *
+     * フィールド: [constant]。
      */
     private String fConstant;
 
     /**
-     * フィールド [description]
-     *
-     * 項目の型 [java.lang.String]<br>
      * 文字列に対する説明を指定します。
+     *
+     * フィールド: [description]。
      */
     private String fDescription;
 
     /**
-     * フィールド [no]のセッターメソッド
+     * フィールド [no] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 項目番号
+     * フィールドの説明: [項目番号]。
      *
-     * @param argNo フィールド[no]に格納したい値
+     * @param argNo フィールド[no]に設定する値。
      */
     public void setNo(final String argNo) {
         fNo = argNo;
     }
 
     /**
-     * フィールド[no]のゲッターメソッド
+     * フィールド [no] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 項目番号
+     * フィールドの説明: [項目番号]。
      *
-     * @return フィールド[no]に格納されている値
+     * @return フィールド[no]から取得した値。
      */
     public String getNo() {
         return fNo;
     }
 
     /**
-     * フィールド [value]のセッターメソッド
+     * フィールド [value] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列を指定します。必須項目です。
+     * フィールドの説明: [文字列を指定します。必須項目です。]。
      *
-     * @param argValue フィールド[value]に格納したい値
+     * @param argValue フィールド[value]に設定する値。
      */
     public void setValue(final String argValue) {
         fValue = argValue;
     }
 
     /**
-     * フィールド[value]のゲッターメソッド
+     * フィールド [value] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列を指定します。必須項目です。
+     * フィールドの説明: [文字列を指定します。必須項目です。]。
      *
-     * @return フィールド[value]に格納されている値
+     * @return フィールド[value]から取得した値。
      */
     public String getValue() {
         return fValue;
     }
 
     /**
-     * フィールド [constant]のセッターメソッド
+     * フィールド [constant] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列に割り付けられる定数を指定します。
+     * フィールドの説明: [文字列に割り付けられる定数を指定します。]。
      *
-     * @param argConstant フィールド[constant]に格納したい値
+     * @param argConstant フィールド[constant]に設定する値。
      */
     public void setConstant(final String argConstant) {
         fConstant = argConstant;
     }
 
     /**
-     * フィールド[constant]のゲッターメソッド
+     * フィールド [constant] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列に割り付けられる定数を指定します。
+     * フィールドの説明: [文字列に割り付けられる定数を指定します。]。
      *
-     * @return フィールド[constant]に格納されている値
+     * @return フィールド[constant]から取得した値。
      */
     public String getConstant() {
         return fConstant;
     }
 
     /**
-     * フィールド [description]のセッターメソッド
+     * フィールド [description] の値を設定します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列に対する説明を指定します。
+     * フィールドの説明: [文字列に対する説明を指定します。]。
      *
-     * @param argDescription フィールド[description]に格納したい値
+     * @param argDescription フィールド[description]に設定する値。
      */
     public void setDescription(final String argDescription) {
         fDescription = argDescription;
     }
 
     /**
-     * フィールド[description]のゲッターメソッド
+     * フィールド [description] の値を取得します。
      *
-     * 項目の型 [java.lang.String]<br>
-     * 文字列に対する説明を指定します。
+     * フィールドの説明: [文字列に対する説明を指定します。]。
      *
-     * @return フィールド[description]に格納されている値
+     * @return フィールド[description]から取得した値。
      */
     public String getDescription() {
         return fDescription;
@@ -138,10 +123,15 @@ public class BlancoStringGroupFieldStructure {
     /**
      * このバリューオブジェクトの文字列表現を取得します。
      *
-     * オブジェクトのシャロー範囲でしかtoStringされない点に注意して利用してください。
+     * <P>使用上の注意</P>
+     * <UL>
+     * <LI>オブジェクトのシャロー範囲のみ文字列化の処理対象となります。
+     * <LI>オブジェクトが循環参照している場合には、このメソッドは使わないでください。
+     * </UL>
      *
      * @return バリューオブジェクトの文字列表現。
      */
+    @Override
     public String toString() {
         final StringBuffer buf = new StringBuffer();
         buf.append("blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure[");
@@ -151,5 +141,37 @@ public class BlancoStringGroupFieldStructure {
         buf.append(",description=" + fDescription);
         buf.append("]");
         return buf.toString();
+    }
+
+    /**
+     * このバリューオブジェクトを指定のターゲットに複写します。
+     *
+     * <P>使用上の注意</P>
+     * <UL>
+     * <LI>オブジェクトのシャロー範囲のみ複写処理対象となります。
+     * <LI>オブジェクトが循環参照している場合には、このメソッドは使わないでください。
+     * </UL>
+     *
+     * @param target target value object.
+     */
+    public void copyTo(final BlancoStringGroupFieldStructure target) {
+        if (target == null) {
+            throw new IllegalArgumentException("Bug: BlancoStringGroupFieldStructure#copyTo(target): argument 'target' is null");
+        }
+
+        // No needs to copy parent class.
+
+        // Name: fNo
+        // Type: java.lang.String
+        target.fNo = this.fNo;
+        // Name: fValue
+        // Type: java.lang.String
+        target.fValue = this.fValue;
+        // Name: fConstant
+        // Type: java.lang.String
+        target.fConstant = this.fConstant;
+        // Name: fDescription
+        // Type: java.lang.String
+        target.fDescription = this.fDescription;
     }
 }

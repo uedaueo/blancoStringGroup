@@ -1,7 +1,3 @@
-/*
- * このソースコードは blanco Frameworkによって自動生成されています。
- * リソースバンドル定義書から作成されたリソースバンドルクラス。
- */
 package blanco.stringgroup.message;
 
 import java.text.MessageFormat;
@@ -10,8 +6,9 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * リソースバンドル定義[BlancoStringGroupMessage/メッセージ定義[BlancoStringGroup]が内部的に利用するリソースバンドルクラス。]のリソースバンドルクラス。
+ * メッセージ定義[BlancoStringGroup]が内部的に利用するリソースバンドルクラス。
  *
+ * リソースバンドル定義: [BlancoStringGroupMessage]。<BR>
  * このクラスはリソースバンドル定義書から自動生成されたリソースバンドルクラスです。<BR>
  */
 class BlancoStringGroupMessageResourceBundle {

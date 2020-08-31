@@ -1,6 +1,3 @@
-/*
- * このソースコードは blanco Frameworkによって自動生成されています。
- */
 package blanco.stringgroup.task;
 
 import java.io.IOException;
@@ -10,7 +7,7 @@ import blanco.stringgroup.task.valueobject.BlancoStringGroupProcessInput;
 /**
  * バッチ処理クラス [BlancoStringGroupBatchProcess]。
  *
- * バッチ処理の呼び出し例。
+ * <P>バッチ処理の呼び出し例。</P>
  * <code>
  * java -classpath (クラスパス) blanco.stringgroup.task.BlancoStringGroupBatchProcess -help
  * </code>

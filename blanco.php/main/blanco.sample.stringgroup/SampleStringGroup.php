@@ -2,7 +2,7 @@
 /*
  * このソースコードは blanco Frameworkにより自動生成されました。
  */
-/*. DOC <@package blanco.sample.stringgroup;>.*/
+namespace blanco.sample.stringgroup;
 
 /*. require_module 'standard'; .*/;
 
@@ -64,10 +64,10 @@ class SampleStringGroup {
     public /*.boolean.*/ function match(/*.string.*/ $argCheck) {
         /* パラメータの数、型チェックを行います。 */
         if (func_num_args() !== 1) {
-            throw new Exception('[ArgumentException]: SampleStringGroup.match のパラメータは[1]個である必要があります。しかし実際には[' . func_num_args() .  ']個のパラメータを伴って呼び出されました。');
+            throw new \Exception('[ArgumentException]: SampleStringGroup.match のパラメータは[1]個である必要があります。しかし実際には[' . func_num_args() .  ']個のパラメータを伴って呼び出されました。');
         }
         if (gettype($argCheck) !== 'string' && gettype($argCheck) !== 'NULL') {
-            throw new Exception('[ArgumentException]: SampleStringGroup.match の1番目のパラメータは[string]型でなくてはなりません。しかし実際には[' . gettype($argCheck) . ']型が与えられました。');
+            throw new \Exception('[ArgumentException]: SampleStringGroup.match の1番目のパラメータは[string]型でなくてはなりません。しかし実際には[' . gettype($argCheck) . ']型が与えられました。');
         }
 
         // No.1
@@ -126,10 +126,10 @@ class SampleStringGroup {
     public /*.boolean.*/ function matchIgnoreCase(/*.string.*/ $argCheck) {
         /* パラメータの数、型チェックを行います。 */
         if (func_num_args() !== 1) {
-            throw new Exception('[ArgumentException]: SampleStringGroup.matchIgnoreCase のパラメータは[1]個である必要があります。しかし実際には[' . func_num_args() .  ']個のパラメータを伴って呼び出されました。');
+            throw new \Exception('[ArgumentException]: SampleStringGroup.matchIgnoreCase のパラメータは[1]個である必要があります。しかし実際には[' . func_num_args() .  ']個のパラメータを伴って呼び出されました。');
         }
         if (gettype($argCheck) !== 'string' && gettype($argCheck) !== 'NULL') {
-            throw new Exception('[ArgumentException]: SampleStringGroup.matchIgnoreCase の1番目のパラメータは[string]型でなくてはなりません。しかし実際には[' . gettype($argCheck) . ']型が与えられました。');
+            throw new \Exception('[ArgumentException]: SampleStringGroup.matchIgnoreCase の1番目のパラメータは[string]型でなくてはなりません。しかし実際には[' . gettype($argCheck) . ']型が与えられました。');
         }
 
         // No.1
@@ -190,10 +190,10 @@ class SampleStringGroup {
     public /*.int.*/ function convertToInt(/*.string.*/ $argCheck) {
         /* パラメータの数、型チェックを行います。 */
         if (func_num_args() !== 1) {
-            throw new Exception('[ArgumentException]: SampleStringGroup.convertToInt のパラメータは[1]個である必要があります。しかし実際には[' . func_num_args() .  ']個のパラメータを伴って呼び出されました。');
+            throw new \Exception('[ArgumentException]: SampleStringGroup.convertToInt のパラメータは[1]個である必要があります。しかし実際には[' . func_num_args() .  ']個のパラメータを伴って呼び出されました。');
         }
         if (gettype($argCheck) !== 'string' && gettype($argCheck) !== 'NULL') {
-            throw new Exception('[ArgumentException]: SampleStringGroup.convertToInt の1番目のパラメータは[string]型でなくてはなりません。しかし実際には[' . gettype($argCheck) . ']型が与えられました。');
+            throw new \Exception('[ArgumentException]: SampleStringGroup.convertToInt の1番目のパラメータは[string]型でなくてはなりません。しかし実際には[' . gettype($argCheck) . ']型が与えられました。');
         }
 
         // No.1

@@ -1,6 +1,3 @@
-/*
- * このソースコードは blanco Frameworkによって自動生成されています。
- */
 package blanco.stringgroup.task;
 
 import java.io.IOException;
@@ -22,4 +19,12 @@ interface BlancoStringGroupProcess {
      * @throws IllegalArgumentException 入力値に不正が見つかった場合。
      */
     int execute(final BlancoStringGroupProcessInput input) throws IOException, IllegalArgumentException;
+
+    /**
+     * 処理の中でアイテムが処理されるたびに進捗報告としてコールバックします。
+     *
+     * @param argProgressMessage 現在処理しているアイテムに関するメッセージ。
+     * @return 処理をそのまま継続する場合は false。処理中断をリクエストしたい場合は true。
+     */
+    boolean progress(final String argProgressMessage);
 }

@@ -5,45 +5,49 @@ interface
     uses SysUtils;
 
 type
-    { 文字列グループのサンプル。このクラスは単にサンプルです。実際の動作には利用されません。 }
+    // 文字列グループのサンプル。このクラスは単にサンプルです。実際の動作には利用されません。
     TSampleStringGroup = class(TObject)
 
-        { No.1 説明:アルファベットの文字列定義。 }
-        const ABCDEFG = 1;
+    public
 
-        { No.2 説明:全角の文字列定義。 }
-        const AIUEO = 2;
+        // No.1 説明:アルファベットの文字列定義。
+        const ABCDEFG: Integer;
 
-        { No.3 説明:シングルクオートが展開されることの確認。 }
-        const QUOTE = 3;
+        // No.2 説明:全角の文字列定義。
+        const AIUEO: Integer;
 
-        { No.4 説明:ダブルクオートが展開されることの確認。 }
-        const DOUBLE_QUOTE = 4;
+        // No.3 説明:シングルクオートが展開されることの確認。
+        const QUOTE: Integer;
 
-        { No.5 説明:バックスラッシュが展開されることの確認。 }
-        const BACK_SLASH = 5;
+        // No.4 説明:ダブルクオートが展開されることの確認。
+        const DOUBLE_QUOTE: Integer;
 
-        { No.7  }
-        const WITHOUT_DESC = 7;
+        // No.5 説明:バックスラッシュが展開されることの確認。
+        const BACK_SLASH: Integer;
 
-        { No.8 説明:途中の空白が適切に処理されることの確認。 }
-        const TEST_SPACE = 8;
+        // No.7
+        const WITHOUT_DESC: Integer;
 
-        { No.9 説明:×マーク。 }
-        const BATU = 9;
+        // No.8 説明:途中の空白が適切に処理されることの確認。
+        const TEST_SPACE: Integer;
 
-        { 未定義。文字列グループ以外の文字列または定数が未定義のもの。 }
-        const NOT_DEFINED = -1;
+        // No.9 説明:×マーク。
+        const BATU: Integer;
 
-        function match(argCheck: String): boolean;
+        // 未定義。文字列グループ以外の文字列または定数が未定義のもの。
+        const NOT_DEFINED: Integer;
 
-        function matchIgnoreCase(argCheck: String): boolean;
+    public
 
-        function convertToInt(argCheck: String): Integer;
+        function match(argCheck: java.lang.String): boolean;
+
+        function matchIgnoreCase(argCheck: java.lang.String): boolean;
+
+        function convertToInt(argCheck: java.lang.String): Integer;
     end;
 implementation
 
-    function TSampleStringGroup.match(argCheck: String): boolean;
+    function TSampleStringGroup.match(argCheck: java.lang.String): boolean;
     begin
         // No.1
         // 説明:アルファベットの文字列定義。
@@ -102,7 +106,7 @@ implementation
         exit;
     end;
 
-    function TSampleStringGroup.matchIgnoreCase(argCheck: String): boolean;
+    function TSampleStringGroup.matchIgnoreCase(argCheck: java.lang.String): boolean;
     begin
         // No.1
         // 説明:アルファベットの文字列定義。
@@ -161,7 +165,7 @@ implementation
         exit;
     end;
 
-    function TSampleStringGroup.convertToInt(argCheck: String): Integer;
+    function TSampleStringGroup.convertToInt(argCheck: java.lang.String): Integer;
     begin
         // No.1
         // 説明:アルファベットの文字列定義。

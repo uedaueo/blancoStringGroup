@@ -1,7 +1,7 @@
 /*
  * blanco Framework
  * Copyright (C) 2004-2006 IGA Tosiki
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
@@ -22,7 +22,7 @@ import blanco.stringgroup.task.valueobject.BlancoStringGroupProcessInput;
 
 /**
  * 「文字列グループ定義書」Excel様式から文字列グループを処理するクラス・ソースコードを生成。
- * 
+ *
  * @author IGA Tosiki
  */
 public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
@@ -71,5 +71,13 @@ public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
         } catch (TransformerException ex) {
             throw new IOException("XML変換の過程で例外が発生しました: " + ex.toString());
         }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public boolean progress(final String argProgressMessage) {
+        System.out.println(argProgressMessage);
+        return false;
     }
 }
