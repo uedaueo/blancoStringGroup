@@ -27,12 +27,12 @@ Namespace blanco.sample.stringgroup
         ''' <summary>No.9 説明:×マーク。</summary>
         Public Const BATU As Integer = 9
 
-        ''' <summary>未定義。文字列グループ以外の文字列または定数が未定義のもの。</summary>
+        ''' <summary>Undefined. A string or constant other than a string group that is undefined.</summary>
         Public Const NOT_DEFINED As Integer = -1
 
-        ''' <summary>文字列グループに含まれる文字列であるかどうかを判定します。</summary>
-        ''' <param name="argCheck">チェックを行いたい文字列。</param>
-        ''' <returns>文字列グループに含まれていればture。グループに含まれない文字列であればfalse。</returns>
+        ''' <summary>Determines if a string is part of a string group.</summary>
+        ''' <param name="argCheck">A string to be checked.</param>
+        ''' <returns>true is the string is part of a string group, false otherwise.</returns>
         Public Function Match(argCheck As String) As Boolean
             ' No.1
             ' 説明:アルファベットの文字列定義。
@@ -81,9 +81,9 @@ Namespace blanco.sample.stringgroup
             Return false
         End Function
 
-        ''' <summary>文字列グループに含まれる文字列であるかどうかを、大文字小文字を区別せず判定します。</summary>
-        ''' <param name="argCheck">チェックを行いたい文字列。</param>
-        ''' <returns>文字列グループに含まれていればture。グループに含まれない文字列であればfalse。</returns>
+        ''' <summary>Determines if a string is part of a string group in a case-insentive manner.</summary>
+        ''' <param name="argCheck">A string to be checked.</param>
+        ''' <returns>true is the string is part of a string group, false otherwise.</returns>
         Public Function MatchIgnoreCase(argCheck As String) As Boolean
             ' No.1
             ' 説明:アルファベットの文字列定義。
@@ -132,12 +132,12 @@ Namespace blanco.sample.stringgroup
             Return false
         End Function
 
-        ''' <summary>文字列から定数に変換します。</summary>
+        ''' <summary>Converts a string to a constant.</summary>
         ''' <remarks>
-        ''' <newpara>定数が未定義の場合や 与えられた文字列が文字列グループ外の場合には NOT_DEFINED を戻します。</newpara>
+        ''' <newpara>Returns NOT_DEFINED if the constant is undefined or if the given string is outside the string group.</newpara>
         ''' </remarks>
-        ''' <param name="argCheck">変換を行いたい文字列。</param>
-        ''' <returns>定数に変換後の値。</returns>
+        ''' <param name="argCheck">A string to be converted.</param>
+        ''' <returns>The value after conversion to a constant.</returns>
         Public Function ConvertToInt(argCheck As String) As Integer
             ' No.1
             ' 説明:アルファベットの文字列定義。
@@ -179,7 +179,7 @@ Namespace blanco.sample.stringgroup
                 Return BATU
             End If
 
-            ' 該当する定数が見つかりませんでした。
+            ' No matching constants were found.
             Return NOT_DEFINED
         End Function
     End Class

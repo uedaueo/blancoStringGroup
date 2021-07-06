@@ -34,7 +34,7 @@ type
         // No.9 説明:×マーク。
         const BATU: Integer;
 
-        // 未定義。文字列グループ以外の文字列または定数が未定義のもの。
+        // Undefined. A string or constant other than a string group that is undefined.
         const NOT_DEFINED: Integer;
 
     public
@@ -215,7 +215,7 @@ implementation
             exit;
         end;
 
-        // 該当する定数が見つかりませんでした。
+        // No matching constants were found.
         result := NOT_DEFINED;
         exit;
     end;

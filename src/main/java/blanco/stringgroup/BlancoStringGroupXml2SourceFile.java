@@ -30,45 +30,45 @@ import blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure;
 import blanco.stringgroup.valueobject.BlancoStringGroupStructure;
 
 /**
- * 「文字列グループ定義書」Excel様式から文字列グループを処理するクラス・ソースコードを生成。
+ * Generates class source code to process string group from "String Group Definition" Excel format.
  * 
- * このクラスは、中間XMLファイルからソースコードを自動生成する機能を担います。
+ * This class is responsible for generation of source code from intermediate XML files.
  * 
  * @author IGA Tosiki
  */
 public class BlancoStringGroupXml2SourceFile {
     /**
-     * メッセージ定義。
+     * Message definition.
      */
     private final BlancoStringGroupMessage fMsg = new BlancoStringGroupMessage();
 
     /**
-     * このプロダクトのリソースバンドルへのアクセスオブジェクト。
+     * An access object to the resource bundle for this product.
      */
     private final BlancoStringGroupResourceBundle fBundle = new BlancoStringGroupResourceBundle();
 
     /**
-     * 出力対象となるプログラミング言語。
+     * Target programming language.
      */
     private int fTargetLang = BlancoCgSupportedLang.NOT_DEFINED;
 
     /**
-     * 内部的に利用するblancoCg用ファクトリ。
+     * A factory for blancoCg to be used internally.
      */
     private BlancoCgObjectFactory fCgFactory = null;
 
     /**
-     * 内部的に利用するblancoCg用ソースファイル情報。
+     * Source file information for blancoCg to be used internally.
      */
     private BlancoCgSourceFile fCgSourceFile = null;
 
     /**
-     * 内部的に利用するblancoCg用クラス情報。
+     * Class information for blancoCg to be used internally.
      */
     private BlancoCgClass fCgClass = null;
 
     /**
-     * 自動生成するソースファイルの文字エンコーディング。
+     * Character encoding of auto-generated source files.
      */
     private String fEncoding = null;
 
@@ -77,16 +77,16 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * 中間XMLファイルからソースコードを自動生成します。
+     * Auto-generates source code from intermediate XML files.
      * 
      * @param argMetaXmlSourceFile
-     *            メタ情報が含まれているXMLファイル。
+     *            An XML file that contains meta-information.
      * @param argTargetLang
-     *            出力対象となるプログラミング言語。
+     *            Target programming language.
      * @param argDirectoryTarget
-     *            ソースコード生成先ディレクトリ (/mainを除く部分を指定します)。
+     *            Output directory of the generated source code (specify the part excluding /main).
      * @throws IOException
-     *             入出力例外が発生した場合。
+     *             If an I/O exception occurs.
      */
     public void process(final File argMetaXmlSourceFile,
             final String argTargetLang, final File argDirectoryTarget)
@@ -111,22 +111,22 @@ public class BlancoStringGroupXml2SourceFile {
                 .parse(argMetaXmlSourceFile);
 
         for (int index = 0; index < structures.length; index++) {
-            // メタ情報の解析結果をもとにソースコード自動生成を実行します。
+            // Auto-generates source code based on the analysis results of meta information.
             structure2Source(structures[index], argDirectoryTarget);
         }
     }
 
     /**
-     * 収集された情報を元に、ソースコードを自動生成します。
+     * Auto-generates source code based on the collected information.
      * 
      * @param argStructure
-     *            メタファイルから収集できた処理構造データ。
+     *            Process structure data collected from metafiles.
      * @param argDirectoryTarget
-     *            ソースコードの出力先フォルダ。
+     *            Output directory of the generated source code.
      */
     public void structure2Source(final BlancoStringGroupStructure argStructure,
             final File argDirectoryTarget) {
-        // 従来と互換性を持たせるため、/mainサブフォルダに出力します。
+        // To make it compatible with the previous version, outputs to the /main subfolder.
         final File fileBlancoMain = new File(argDirectoryTarget
                 .getAbsolutePath()
                 + "/main");
@@ -139,7 +139,7 @@ public class BlancoStringGroupXml2SourceFile {
         fCgSourceFile.setEncoding(fEncoding);
         switch (fTargetLang) {
         case BlancoCgSupportedLang.DELPHI:
-            // Delphi言語では、Unit名との名前衝突を避けるため、慣例に従いクラス名に強制的にTをつけます。
+            // In Delph, it forces the class name to have "T" in order to avoid name collision with the Unit name, as is customary.
             fCgClass = fCgFactory.createClass("T" + argStructure.getName()
                     + BlancoStringUtil.null2Blank(argStructure.getSuffix()),
                     BlancoStringUtil.null2Blank(argStructure.getDescription()));
@@ -157,7 +157,7 @@ public class BlancoStringGroupXml2SourceFile {
         expandMethodMatchIgnoreCase(argStructure);
         expandMethodConvertToInt(argStructure);
 
-        // TODO 現在 Java言語にしか対応していません。
+        // TODO: Currently, only Java is supported.
         switch (fTargetLang) {
         case BlancoCgSupportedLang.JAVA:
             expandMethodConvertToString(argStructure);
@@ -169,10 +169,10 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * 定数フィールドを展開します。
+     * Expands the constant field.
      * 
      * @param argProcessStructure
-     *            メタファイルから収集できた処理構造データ。
+     *            Process structure data collected from metafiles.
      */
     private void expandField(
             final BlancoStringGroupStructure argProcessStructure) {
@@ -187,7 +187,7 @@ public class BlancoStringGroupXml2SourceFile {
             }
 
             String description = "";
-            // ここから個別の文字に対する処理を記述します。
+            // From here, the processing for each character is described.
             if (fieldLook.getNo() != null) {
                 description += fBundle.getXml2sourceFileFieldNo(fieldLook
                         .getNo()
@@ -211,7 +211,7 @@ public class BlancoStringGroupXml2SourceFile {
 
         if (isProcessed) {
             final BlancoCgField cgField = fCgFactory.createField("NOT_DEFINED",
-                    getTypeInt(), "未定義。文字列グループ以外の文字列または定数が未定義のもの。");
+                    getTypeInt(), "Undefined. A string or constant other than a string group that is undefined.");
             fCgClass.getFieldList().add(cgField);
 
             cgField.setAccess("public");
@@ -222,22 +222,22 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * matchメソッドを展開します。
+     * Expands "match" method.
      * 
      * @param argProcessStructure
-     *            メタファイルから収集できた処理構造データ。
+     *            Process structure data collected from metafiles.
      */
     private void expandMethodMatch(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                getMethodName("match"), "文字列グループに含まれる文字列であるかどうかを判定します。");
+                getMethodName("match"), "Determines if a string is part of a string group.");
         fCgClass.getMethodList().add(cgMethod);
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeString(),
-                        "チェックを行いたい文字列。"));
+                        "A string to be checked."));
         cgMethod.setReturn(fCgFactory.createReturn(getTypeBoolean(),
-                "文字列グループに含まれていればture。グループに含まれない文字列であればfalse。"));
+                "true is the string is part of a string group, false otherwise."));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -246,7 +246,7 @@ public class BlancoStringGroupXml2SourceFile {
             final BlancoStringGroupFieldStructure fieldLook = (BlancoStringGroupFieldStructure) argProcessStructure
                     .getFieldList().get(indexField);
 
-            // ここから個別の文字に対する処理を記述します。
+            // From here, the processing for each character is described.
             if (fieldLook.getNo() != null) {
                 lineList.add(BlancoCgLineUtil
                         .getSingleLineCommentPrefix(fTargetLang)
@@ -371,23 +371,23 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * matchIgnoreCaseメソッドを展開します。
+     * Expands "matchIgnoreCase" method.
      * 
      * @param argProcessStructure
-     *            メタファイルから収集できた処理構造データ。
+     *            Process structure data collected from metafiles.
      */
     private void expandMethodMatchIgnoreCase(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
                 getMethodName("matchIgnoreCase"),
-                "文字列グループに含まれる文字列であるかどうかを、大文字小文字を区別せず判定します。");
+                "Determines if a string is part of a string group in a case-insentive manner.");
         fCgClass.getMethodList().add(cgMethod);
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeString(),
-                        "チェックを行いたい文字列。"));
+                        "A string to be checked."));
         cgMethod.setReturn(fCgFactory.createReturn(getTypeBoolean(),
-                "文字列グループに含まれていればture。グループに含まれない文字列であればfalse。"));
+                "true is the string is part of a string group, false otherwise."));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -396,7 +396,7 @@ public class BlancoStringGroupXml2SourceFile {
             final BlancoStringGroupFieldStructure fieldLook = (BlancoStringGroupFieldStructure) argProcessStructure
                     .getFieldList().get(indexField);
 
-            // ここから個別の文字に対する処理を記述します。
+            // From here, the processing for each character is described.
             if (fieldLook.getNo() != null) {
                 lineList.add(BlancoCgLineUtil
                         .getSingleLineCommentPrefix(fTargetLang)
@@ -535,24 +535,24 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * convertToIntメソッドを展開します。
+     * Expands "convertToInt" method.
      * 
      * @param argProcessStructure
-     *            メタファイルから収集できた処理構造データ。
+     *            Process structure data collected from metafiles.
      */
     private void expandMethodConvertToInt(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                getMethodName("convertToInt"), "文字列から定数に変換します。");
+                getMethodName("convertToInt"), "Converts a string to a constant.");
         fCgClass.getMethodList().add(cgMethod);
 
         cgMethod.getLangDoc().getDescriptionList().add(
-                "定数が未定義の場合や 与えられた文字列が文字列グループ外の場合には NOT_DEFINED を戻します。");
+                "Returns NOT_DEFINED if the constant is undefined or if the given string is outside the string group.");
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeString(),
-                        "変換を行いたい文字列。"));
-        cgMethod.setReturn(fCgFactory.createReturn(getTypeInt(), "定数に変換後の値。"));
+                        "A string to be converted."));
+        cgMethod.setReturn(fCgFactory.createReturn(getTypeInt(), "The value after conversion to a constant."));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -562,11 +562,11 @@ public class BlancoStringGroupXml2SourceFile {
                     .getFieldList().get(indexField);
 
             if (BlancoStringUtil.null2Blank(fieldLook.getConstant()).length() == 0) {
-                // 定数が未定義のものはスキップします。
+                // Skips those constants that are undefined.
                 continue;
             }
 
-            // ここから個別の文字に対する処理を記述します。
+            // From here, the processing for each character is described.
             if (fieldLook.getNo() != null) {
                 lineList.add(BlancoCgLineUtil
                         .getSingleLineCommentPrefix(fTargetLang)
@@ -683,7 +683,7 @@ public class BlancoStringGroupXml2SourceFile {
 
         lineList.add("");
         lineList.add(BlancoCgLineUtil.getSingleLineCommentPrefix(fTargetLang)
-                + "該当する定数が見つかりませんでした。");
+                + "No matching constants were found.");
 
         switch (fTargetLang) {
         case BlancoCgSupportedLang.JAVA:
@@ -719,26 +719,26 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * convertToStringメソッドを展開します。
+     * Expands "convertToString" method.
      * 
-     * TODO Java言語にのみ対応しています。他の言語には対応していません。
+     * TODO: Only Java is supported. Other languages are not supported.
      * 
      * @param argProcessStructure
-     *            メタファイルから収集できた処理構造データ。
+     *            Process structure data collected from metafiles.
      */
     private void expandMethodConvertToString(
             final BlancoStringGroupStructure argProcessStructure) {
 
         final BlancoCgMethod cgMethod = fCgFactory.createMethod(
-                getMethodName("convertToString"), "定数から文字列に変換します。");
+                getMethodName("convertToString"), "Converts a constant to a string.");
         fCgClass.getMethodList().add(cgMethod);
 
-        cgMethod.getLangDoc().getDescriptionList().add("定数と対応づく文字列に変換します。");
+        cgMethod.getLangDoc().getDescriptionList().add("Converts to a string corresponding to a constant.");
         cgMethod.getParameterList().add(
                 fCgFactory.createParameter("argCheck", getTypeInt(),
-                        "変換を行いたい文字定数。"));
+                        "A constant to be converted."));
         cgMethod.setReturn(fCgFactory.createReturn(getTypeString(),
-                "文字列に変換後の値。NOT_DEFINEDの場合には長さ0の文字列。"));
+                "The value after conversion to a string, or a zero-length string if NOT_DEFINED."));
 
         final List<java.lang.String> lineList = cgMethod.getLineList();
 
@@ -775,7 +775,7 @@ public class BlancoStringGroupXml2SourceFile {
         }
 
         lineList.add(BlancoCgLineUtil.getSingleLineCommentPrefix(fTargetLang)
-                + "未定義。");
+                + "Undefined.");
         lineList.add("if (argCheck == NOT_DEFINED) {");
         lineList.add("return "
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
@@ -785,23 +785,23 @@ public class BlancoStringGroupXml2SourceFile {
 
         lineList.add("");
         lineList.add(BlancoCgLineUtil.getSingleLineCommentPrefix(fTargetLang)
-                + "いずれにも該当しませんでした。");
+                + "None of them were applicable.");
         lineList.add("throw new IllegalArgumentException("
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
-                + "与えられた値("
+                + "The given value ("
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
                 + " + argCheck + "
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang)
-                + ")は文字列グループ[" + argProcessStructure.getName()
-                + "]では定義されない値です。"
+                + ") is a value that is not defined in the string group [" + argProcessStructure.getName()
+                + "]."
                 + BlancoCgLineUtil.getStringLiteralEnclosure(fTargetLang) + ")"
                 + BlancoCgLineUtil.getTerminator(fTargetLang));
     }
 
     /**
-     * プログラミング言語処理系に合った boolean 型の名称を取得します。
+     * Gets the name of the boolean type that matches the programming language.
      * 
-     * 型の読み替え。
+     * Changes the reading of the type.
      * 
      * @return
      */
@@ -820,9 +820,9 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * プログラミング言語処理系に合った String 型の名称を取得します。
+     * Gets the name of the String type that matches the programming language.
      * 
-     * 型の読み替え。
+     * Changes the reading of the type.
      * 
      * @return
      */
@@ -858,12 +858,12 @@ public class BlancoStringGroupXml2SourceFile {
     }
 
     /**
-     * プログラミング言語処理系に合った メソッドの名前変形をおこないます。
+     * Transforms the method name to match the programming language.
      * 
-     * メソッド名の読み替え。
+     * Changes the reading of the method name.
      * 
      * @param argMethodName
-     *            メソッド名。
+     *            The method name.
      * @return
      */
     private final String getMethodName(final String argMethodName) {

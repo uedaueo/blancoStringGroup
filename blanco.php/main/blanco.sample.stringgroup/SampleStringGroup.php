@@ -51,15 +51,15 @@ class SampleStringGroup {
     const BATU = 9;
 
     /**
-     * 未定義。文字列グループ以外の文字列または定数が未定義のもの。
+     * Undefined. A string or constant other than a string group that is undefined.
      */
     const NOT_DEFINED = -1;
 
     /**
-     * 文字列グループに含まれる文字列であるかどうかを判定します。
+     * Determines if a string is part of a string group.
      *
-     * @param string $argCheck チェックを行いたい文字列。
-     * @return boolean 文字列グループに含まれていればture。グループに含まれない文字列であればfalse。
+     * @param string $argCheck A string to be checked.
+     * @return boolean true is the string is part of a string group, false otherwise.
      */
     public /*.boolean.*/ function match(/*.string.*/ $argCheck) {
         /* パラメータの数、型チェックを行います。 */
@@ -118,10 +118,10 @@ class SampleStringGroup {
     }
 
     /**
-     * 文字列グループに含まれる文字列であるかどうかを、大文字小文字を区別せず判定します。
+     * Determines if a string is part of a string group in a case-insentive manner.
      *
-     * @param string $argCheck チェックを行いたい文字列。
-     * @return boolean 文字列グループに含まれていればture。グループに含まれない文字列であればfalse。
+     * @param string $argCheck A string to be checked.
+     * @return boolean true is the string is part of a string group, false otherwise.
      */
     public /*.boolean.*/ function matchIgnoreCase(/*.string.*/ $argCheck) {
         /* パラメータの数、型チェックを行います。 */
@@ -180,12 +180,12 @@ class SampleStringGroup {
     }
 
     /**
-     * 文字列から定数に変換します。
+     * Converts a string to a constant.
      *
-     * 定数が未定義の場合や 与えられた文字列が文字列グループ外の場合には NOT_DEFINED を戻します。
+     * Returns NOT_DEFINED if the constant is undefined or if the given string is outside the string group.
      *
-     * @param string $argCheck 変換を行いたい文字列。
-     * @return integer 定数に変換後の値。
+     * @param string $argCheck A string to be converted.
+     * @return integer The value after conversion to a constant.
      */
     public /*.int.*/ function convertToInt(/*.string.*/ $argCheck) {
         /* パラメータの数、型チェックを行います。 */
@@ -236,7 +236,7 @@ class SampleStringGroup {
             return self::BATU;
         }
 
-        // 該当する定数が見つかりませんでした。
+        // No matching constants were found.
         return self::NOT_DEFINED;
     }
 }

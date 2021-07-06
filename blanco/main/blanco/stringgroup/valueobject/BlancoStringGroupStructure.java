@@ -40,7 +40,7 @@ public class BlancoStringGroupStructure {
      * フィールド: [fieldList]。
      * デフォルト: [new java.util.ArrayList&lt;blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure&gt;()]。
      */
-    private List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> fFieldList = new java.util.ArrayList<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>();
+    private List<BlancoStringGroupFieldStructure> fFieldList = new java.util.ArrayList<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure>();
 
     /**
      * フィールド [name] の値を設定します。
@@ -137,7 +137,7 @@ public class BlancoStringGroupStructure {
      *
      * @param argFieldList フィールド[fieldList]に設定する値。
      */
-    public void setFieldList(final List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> argFieldList) {
+    public void setFieldList(final List<BlancoStringGroupFieldStructure> argFieldList) {
         fFieldList = argFieldList;
     }
 
@@ -149,7 +149,7 @@ public class BlancoStringGroupStructure {
      *
      * @return フィールド[fieldList]から取得した値。
      */
-    public List<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> getFieldList() {
+    public List<BlancoStringGroupFieldStructure> getFieldList() {
         return fFieldList;
     }
 
@@ -209,14 +209,6 @@ public class BlancoStringGroupStructure {
         target.fSuffix = this.fSuffix;
         // Name: fFieldList
         // Type: java.util.List
-        if (this.fFieldList != null) {
-            final java.util.Iterator<blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure> iterator = this.fFieldList.iterator();
-            for (; iterator.hasNext();) {
-                blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure loopSource = iterator.next();
-                blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure loopTarget = null;
-                // フィールド[generics]はサポート外の型[blanco.stringgroup.valueobject.BlancoStringGroupFieldStructure]です。
-                target.fFieldList.add(loopTarget);
-            }
-        }
+        // フィールド[fFieldList]はサポート外の型[java.util.Listblanco.stringgroup.valueobject.BlancoStringGroupFieldStructure]です。
     }
 }

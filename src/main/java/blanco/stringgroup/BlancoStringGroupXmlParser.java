@@ -23,22 +23,22 @@ import blanco.xml.bind.valueobject.BlancoXmlDocument;
 import blanco.xml.bind.valueobject.BlancoXmlElement;
 
 /**
- * このクラスは、中間XMLファイルから情報抽出する機能を担います。
+ * This class is responsible for extracting information from intermediate XML files.
  * 
  * @author IGA Tosiki
  */
 public class BlancoStringGroupXmlParser {
     /**
-     * メッセージ定義。
+     * Message definition.
      */
     protected final BlancoStringGroupMessage fMsg = new BlancoStringGroupMessage();
 
     /**
-     * 中間XMLファイルのXMLドキュメントをパースして、情報の配列を取得します。
+     * Parses an XML document in an intermediate XML file to get an array of information.
      * 
      * @param argMetaXmlSourceFile
-     *            中間XMLファイル。
-     * @return パースの結果得られた情報の配列。
+     *            An intermediate XML file.
+     * @return An array of information obtained as a result of parsing.
      */
     public BlancoStringGroupStructure[] parse(final File argMetaXmlSourceFile) {
         final BlancoXmlDocument documentMeta = new BlancoXmlUnmarshaller()
@@ -51,24 +51,24 @@ public class BlancoStringGroupXmlParser {
     }
 
     /**
-     * 中間XMLファイル形式のXMLドキュメントをパースして、バリューオブジェクト情報の配列を取得します。
+     * Parses an XML document in an intermediate XML file to get an array of value object information.
      * 
      * @param argXmlDocument
-     *            中間XMLファイルのXMLドキュメント。
-     * @return パースの結果得られたバリューオブジェクト情報の配列。
+     *            XML document of an intermediate XML file.
+     * @return An array of value object information obtained as a result of parsing.
      */
     public BlancoStringGroupStructure[] parse(
             final BlancoXmlDocument argXmlDocument) {
         final List<BlancoStringGroupStructure> listStructure = new ArrayList<BlancoStringGroupStructure>();
-        // ルートエレメントを取得します。
+        // Gets the root element.
         final BlancoXmlElement elementRoot = BlancoXmlBindingUtil
                 .getDocumentElement(argXmlDocument);
         if (elementRoot == null) {
-            // ルートエレメントが無い場合には処理中断します。
+            // The process is aborted if there is no root element.
             return null;
         }
 
-        // sheet(Excelシート)のリストを取得します。
+        // Gets a list of sheets (Excel sheets).
         final List<BlancoXmlElement> listSheet = BlancoXmlBindingUtil
                 .getElementsByTagName(elementRoot, "sheet");
         final int sizeListSheet = listSheet.size();
@@ -77,7 +77,7 @@ public class BlancoStringGroupXmlParser {
 
             final BlancoStringGroupStructure structure = parseElementSheet(elementSheet);
             if (structure != null) {
-                // 得られた情報を記憶します。
+                // Memorizes the obtained information.
                 listStructure.add(structure);
             }
         }
@@ -89,29 +89,29 @@ public class BlancoStringGroupXmlParser {
     }
 
     /**
-     * 中間XMLファイル形式の「sheet」XMLエレメントをパースして、バリューオブジェクト情報を取得します。
+     * Parses the "sheet" XML element in the intermediate XML file to get the value object information.
      * 
      * @param argElementSheet
-     *            中間XMLファイルの「sheet」XMLエレメント。
-     * @return パースの結果得られたバリューオブジェクト情報。「name」が見つからなかった場合には nullを戻します。
+     *            "sheet" XML element in the intermediate XML file.
+     * @return Value object information obtained as a result of parsing. Null is returned if "name" is not found.
      */
     public BlancoStringGroupStructure parseElementSheet(
             final BlancoXmlElement argElementSheet) {
         final BlancoStringGroupStructure structure = new BlancoStringGroupStructure();
-        // 入力パラメータ情報を取得します。
+        // Gets the input parameter information.
 
         final List<BlancoXmlElement> listCommon = BlancoXmlBindingUtil
                 .getElementsByTagName(argElementSheet,
                         "blancostringgroup-common");
         if (listCommon.size() == 0) {
-            // commonが無い場合にはスキップします。
+            // Skips if there is no common.
             return null;
         }
 
-        // 最初のアイテムのみ処理しています。
+        // Processes only the first item.
         final BlancoXmlElement elementCommon = listCommon.get(0);
 
-        // シートから詳細な情報を取得します。
+        // Gets detailed information from the sheet.
         structure.setName(BlancoXmlBindingUtil.getTextContent(elementCommon,
                 "name"));
         structure.setPackage(BlancoXmlBindingUtil.getTextContent(elementCommon,
@@ -142,7 +142,7 @@ public class BlancoStringGroupXmlParser {
             return null;
         }
 
-        // 一覧の内容を取得します。
+        // Gets the contents of the list.
         final List<BlancoXmlElement> listField = BlancoXmlBindingUtil
                 .getElementsByTagName(elementStringGroupList, "field");
         for (int indexField = 0; indexField < listField.size(); indexField++) {
@@ -155,7 +155,7 @@ public class BlancoStringGroupXmlParser {
             fieldStructure.setValue(BlancoXmlBindingUtil.getTextContent(
                     elementField, "value"));
             if (fieldStructure.getValue() == null) {
-                // valueが指定されていない場合には処理しません。
+                // Skips if value is not specified.
                 continue;
             }
 
@@ -165,7 +165,7 @@ public class BlancoStringGroupXmlParser {
             fieldStructure.setDescription(BlancoXmlBindingUtil.getTextContent(
                     elementField, "description"));
 
-            // 既に同じ内容が登録されていないかどうかのチェック。
+            // Checks to see if the same content has already been registered.
             for (int indexPast = 0; indexPast < structure.getFieldList().size(); indexPast++) {
                 final BlancoStringGroupFieldStructure fieldPast = (BlancoStringGroupFieldStructure) structure
                         .getFieldList().get(indexPast);

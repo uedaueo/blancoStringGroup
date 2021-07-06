@@ -21,13 +21,13 @@ import blanco.stringgroup.message.BlancoStringGroupMessage;
 import blanco.stringgroup.task.valueobject.BlancoStringGroupProcessInput;
 
 /**
- * 「文字列グループ定義書」Excel様式から文字列グループを処理するクラス・ソースコードを生成。
+ * Generates class source code to process string group from "String Group Definition" Excel format.
  *
  * @author IGA Tosiki
  */
 public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
     /**
-     * メッセージ定義。
+     * Message definition.
      */
     private final BlancoStringGroupMessage fMsg = new BlancoStringGroupMessage();
 
@@ -43,16 +43,16 @@ public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
                         .getMetadir()));
             }
 
-            // テンポラリディレクトリを作成。
+            // Creates a temporary directory.
             new File(input.getTmpdir()
                     + BlancoStringGroupConstants.TARGET_SUBDIRECTORY).mkdirs();
 
-            // 指定されたメタディレクトリを処理します。
+            // Processes the specified meta directory.
             new BlancoStringGroupMeta2Xml().processDirectory(fileMetadir, input
                     .getTmpdir()
                     + BlancoStringGroupConstants.TARGET_SUBDIRECTORY);
 
-            // XML化された中間ファイルからソースコードを生成
+            // Generates source code from XML-ized intermediate files.
             final File[] fileMeta2 = new File(input.getTmpdir()
                     + BlancoStringGroupConstants.TARGET_SUBDIRECTORY)
                     .listFiles();
@@ -69,7 +69,7 @@ public class BlancoStringGroupProcessImpl implements BlancoStringGroupProcess {
 
             return BlancoStringGroupBatchProcess.END_SUCCESS;
         } catch (TransformerException ex) {
-            throw new IOException("XML変換の過程で例外が発生しました: " + ex.toString());
+            throw new IOException("An exception has occurred during the XML conversion process: " + ex.toString());
         }
     }
 

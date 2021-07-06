@@ -65,16 +65,16 @@ SampleStringGroup.TEST_SPACE = 8;
 SampleStringGroup.BATU = 9;
 
 /**
- * 未定義。文字列グループ以外の文字列または定数が未定義のもの。
+ * Undefined. A string or constant other than a string group that is undefined.
  * @type int
  */
 SampleStringGroup.NOT_DEFINED = -1;
 
 /**
- * 文字列グループに含まれる文字列であるかどうかを判定します。
+ * Determines if a string is part of a string group.
  * @addon
- * @param {string} argCheck チェックを行いたい文字列。
- * @return 文字列グループに含まれていればture。グループに含まれない文字列であればfalse。
+ * @param {string} argCheck A string to be checked.
+ * @return true is the string is part of a string group, false otherwise.
  * @type boolean
  */
 SampleStringGroup.prototype.match = function(/* string */ argCheck) {
@@ -134,10 +134,10 @@ SampleStringGroup.prototype.match = function(/* string */ argCheck) {
 };
 
 /**
- * 文字列グループに含まれる文字列であるかどうかを、大文字小文字を区別せず判定します。
+ * Determines if a string is part of a string group in a case-insentive manner.
  * @addon
- * @param {string} argCheck チェックを行いたい文字列。
- * @return 文字列グループに含まれていればture。グループに含まれない文字列であればfalse。
+ * @param {string} argCheck A string to be checked.
+ * @return true is the string is part of a string group, false otherwise.
  * @type boolean
  */
 SampleStringGroup.prototype.matchIgnoreCase = function(/* string */ argCheck) {
@@ -197,12 +197,12 @@ SampleStringGroup.prototype.matchIgnoreCase = function(/* string */ argCheck) {
 };
 
 /**
- * 文字列から定数に変換します。
+ * Converts a string to a constant.
  * @addon
- * @param {string} argCheck 変換を行いたい文字列。
- * @return 定数に変換後の値。
+ * @param {string} argCheck A string to be converted.
+ * @return The value after conversion to a constant.
  * @type int
- * 定数が未定義の場合や 与えられた文字列が文字列グループ外の場合には NOT_DEFINED を戻します。
+ * Returns NOT_DEFINED if the constant is undefined or if the given string is outside the string group.
  */
 SampleStringGroup.prototype.convertToInt = function(/* string */ argCheck) {
     /* パラメータの数、型チェックを行います。 */
@@ -253,7 +253,7 @@ SampleStringGroup.prototype.convertToInt = function(/* string */ argCheck) {
         return SampleStringGroup.BATU;
     }
 
-    // 該当する定数が見つかりませんでした。
+    // No matching constants were found.
     return SampleStringGroup.NOT_DEFINED;
 };
 /* クラス[SampleStringGroup]宣言の終了。 */
